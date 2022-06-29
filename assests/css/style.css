@@ -1102,14 +1102,17 @@ button>a {
 }
 
 #face>a>.fa-facebook-square {
+    margin-right: 8px;
     color: #000;
 }
 
 #inst>a>.fa-instagram {
+    margin-right: 8px;
     color: #000;
 }
 
 #linked>a>.fa-linkedin-square {
+    margin-right: 8px;
     color: #000;
 }
 
@@ -1140,8 +1143,4 @@ hr {
     font-size: 14px;
     justify-content: space-between;
     padding-bottom: 20px;
-}
-
-padding-bottom: 20px;
-
 }
