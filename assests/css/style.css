@@ -534,7 +534,35 @@ body {
     color: #fab73a;
 }
 
-.fa-star {
+.who-we-are {
+    margin: 150px 0px 18px 135px;
+}
+
+.we-content {
+    width: 485px;
+}
+
+.we-content>h1 {
+    margin: 20px 0px 10px 0px;
+}
+
+.we-content>#organic {
+    font-size: 20px;
+    margin: 20px 0px 20px 0px;
+    color: #000;
+}
+
+.we-content>p {
+    color: #636363;
+    margin: 20px 0px 40px 0px;
+}
+
+.we-content>.items {
+    display: flex;
+}
+
+.fa-star,
+.fa-envira {
     margin-right: 10px;
     padding: 20px;
     font-size: 20px;
