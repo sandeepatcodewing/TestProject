@@ -217,6 +217,11 @@ body {
     padding: 40px 0px;
 }
 
+button>a {
+    text-decoration: none;
+    color: #000;
+}
+
 .button-shop {
     padding-bottom: 108px;
 }
@@ -1096,19 +1101,19 @@ body {
     display: flex;
 }
 
-#facebook>a>.fa-facebook-square {
+#face>a>.fa-facebook-square {
     color: #000;
 }
 
-#insta>a>.fa-instagram {
+#inst>a>.fa-instagram {
     color: #000;
 }
 
-#linkedin>a>.fa-linkedin-square {
+#linked>a>.fa-linkedin-square {
     color: #000;
 }
 
-#twitter>a>.fa-twitter {
+#twit>a>.fa-twitter {
     color: #000;
 }
 
@@ -1135,4 +1140,8 @@ hr {
     font-size: 14px;
     justify-content: space-between;
     padding-bottom: 20px;
+}
+
+padding-bottom: 20px;
+
 }
