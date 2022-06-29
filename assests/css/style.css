@@ -2,10 +2,11 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    border: none;
 }
 
 h1 {
-    font-size: 44px;
+    font-size: 40px;
 }
 
 body {
@@ -349,7 +350,7 @@ body {
     background-color: #f84d4d;
     color: #fff;
     border-radius: 50px;
-    padding: 0px 10px;
+    padding: 3px 10px;
     font-size: 12px;
 }
 
@@ -360,7 +361,7 @@ body {
     background-color: #fab73a;
     color: #fff;
     border-radius: 50px;
-    padding: 0px 10px;
+    padding: 3px 10px;
     font-size: 12px;
 }
 
@@ -371,7 +372,7 @@ body {
     background-color: #91c997;
     color: #4a8050;
     border-radius: 50px;
-    padding: 0px 10px;
+    padding: 3px 10px;
     font-size: 12px;
 }
 
@@ -382,7 +383,7 @@ body {
     background-color: #91c997;
     color: #4a8050;
     border-radius: 50px;
-    padding: 0px 10px;
+    padding: 3px 10px;
     font-size: 12px;
 }
 
@@ -556,7 +557,7 @@ body {
 }
 
 .we-content {
-    width: 600px;
+    width: 100%;
     padding: 150px 0px 20px 0px;
 }
 
@@ -565,32 +566,34 @@ body {
 }
 
 .we-content>#organic {
+    width: 430px;
     font-size: 20px;
     margin: 20px 0px 20px 0px;
     color: #000;
 }
 
 .we-content>p {
+    width: 460px;
     color: #636363;
-    margin: 20px 0px 40px 0px;
+    margin: 0px 0px 40px 0px;
 }
 
 .we-content>.items {
     display: flex;
+    justify-content: start;
 }
 
 .star-icon {
     display: flex;
-    margin: 0px 30px 60px 0px;
-    padding: 15px 35px;
+    margin: 0px 20px 60px 0px;
+    padding: 10px 25px;
     border-radius: 15px;
     box-shadow: 0px 5px 36px -9px rgba(0, 0, 0, 0.1);
 }
 
 .leaf-icon {
     display: flex;
-    margin-right: 30px;
-    padding: 15px 35px;
+    padding: 10px 25px;
     border-radius: 15px;
     box-shadow: 0px 5px 36px -9px rgba(0, 0, 0, 0.1);
 }
@@ -606,5 +609,90 @@ body {
 }
 
 .who-we-are_content-image {
-    padding: 80px 0px 80px 20px;
+    padding: 120px 0px 80px 60px;
+}
+
+.who-we-are_content-image>img {
+    border-radius: 16px;
+}
+
+.we-content_button-learn>button {
+    border: none;
+    font-size: 18px;
+    background-color: #fab73a;
+    padding: 17.5px 30px;
+    border-radius: 16px;
+}
+
+.testimonals {
+    text-align: center;
+    padding: 60px 0px;
+    background-color: #f7f9f4;
+}
+
+.testimonals-title>h1 {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.testimonals-data {
+    text-align: center;
+    display: flex;
+}
+
+.left-navigation,
+.right-navigation {
+    margin: auto;
+}
+
+.testimonals-content {
+    width: 770px;
+    height: 330px;
+    background-color: #fff;
+    padding: 16px;
+    margin: 0px 50px;
+    border-radius: 15px;
+}
+
+.testimonals-content>.fa-quote-left {
+    font-size: 30px;
+    color: #E3E9D7;
+    padding: 40px 0px;
+    ;
+}
+
+.testimonals-content_text {
+    font-size: 18px;
+    padding: 0px 35px 22px 35px;
+    text-align: center;
+}
+
+.testimonals-content_author {
+    padding-bottom: 8px;
+}
+
+.testimonals-content_desgination {
+    padding-bottom: 20px;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+    padding: 20px;
+    font-size: 20px;
+    color: #4E7302;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.testimonals>.container>.navigation-click {
+    text-align: center;
+    padding: 45px 0px;
+}
+
+.testimonals-button>button {
+    border: none;
+    font-size: 18px;
+    background-color: #fab73a;
+    padding: 17.5px 30px;
+    border-radius: 16px;
 }
