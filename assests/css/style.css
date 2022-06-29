@@ -908,3 +908,50 @@ body {
     border: none;
     color: #fff;
 }
+
+.percentage-off {
+    padding: 60px 0px 50px 0px;
+}
+
+.percentage-off_image {
+    position: relative;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #eaf4d7;
+}
+
+.percentage-off_text-centered {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#text-first {
+    font-size: 12px;
+    padding: 60px 0px;
+    font-weight: bold;
+    color: #7c8273;
+    letter-spacing: 4px;
+}
+
+#text-second {
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+
+#text-third {
+    font-size: 20px;
+}
+
+.percentage-off_button {
+    padding: 40px 0px 0px 0px;
+}
+
+.percentage-off_button>button {
+    border: none;
+    font-size: 18px;
+    background-color: #fab73a;
+    padding: 17.5px 30px;
+    border-radius: 16px;
+}
