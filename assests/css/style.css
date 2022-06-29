@@ -326,7 +326,21 @@ body {
     width: 1140px;
     display: flex;
     justify-content: space-between;
-    /* margin-bottom: 25px; */
+}
+
+.card-list-firstrow {
+    margin: auto;
+    width: 1140px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-list-secondrow {
+    margin: auto;
+    width: 1140px;
+    margin-top: 85px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card {
@@ -695,4 +709,202 @@ body {
     background-color: #fab73a;
     padding: 17.5px 30px;
     border-radius: 16px;
+}
+
+.hot-sales {
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.hot-sales_title {
+    text-align: center;
+    padding: 80px 0px 20px 0px;
+}
+
+.hot-sales_text {
+    text-align: center;
+    padding: 0px 0px 50px 0px;
+}
+
+.hot-sales_card>.card-list-firstrow>.card-data {
+    text-align: center;
+    width: 370px;
+    height: 320px;
+    position: relative;
+    text-align: center;
+    border-radius: 15px;
+    border-radius: 20px;
+    background-color: #f5f7ed;
+}
+
+.hot-sales_card>.card-list-firstrow>.card-data>img {
+    width: 152px;
+    background-color: #f5f7ed;
+}
+
+.hot-sales_card>.card-list-firstrow>.card-data .top-left {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #000;
+    border-radius: 50px;
+    padding: 3px 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hot-sales_card>.card-list-firstrow>.card-data .top-right {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #f84d4d;
+    color: #fff;
+    border-radius: 50px;
+    padding: 3px 10px;
+    font-size: 12px;
+}
+
+.hot-sales_card>.card-list-firstrow>.card-data .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.view-option {
+    display: flex;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+
+.view-option>#eye-fa {
+    padding: 0px;
+    font-size: 20px;
+}
+
+.view-option>p {
+    margin: auto;
+    font-weight: bold;
+}
+
+.hot-sales_card>.card-list-firstrow>.card-data .top-right-colorone {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #FAB73A;
+    color: #fff;
+    border-radius: 50px;
+    padding: 3px 10px;
+    font-size: 12px;
+}
+
+.hot-sales_card>.card-list-secondrow>.card-data {
+    text-align: center;
+    width: 370px;
+    height: 320px;
+    position: relative;
+    text-align: center;
+    border-radius: 15px;
+    border-radius: 20px;
+    background-color: #f5f7ed;
+}
+
+.hot-sales_card>.card-list-secondrow>.card-data>img {
+    width: 152px;
+    background-color: #f5f7ed;
+}
+
+.hot-sales_card>.card-list-secondrow>.card-data .top-left {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #000;
+    border-radius: 50px;
+    padding: 3px 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hot-sales_card>.card-list-secondrow>.card-data .top-right {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #f84d4d;
+    color: #fff;
+    border-radius: 50px;
+    padding: 3px 10px;
+    font-size: 12px;
+}
+
+.hot-sales_card>.card-list-secondrow>.card-data .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hot-sales_card>.card-list-secondrow>.card-data .top-right-colorone {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #FAB73A;
+    color: #fff;
+    border-radius: 50px;
+    padding: 3px 10px;
+    font-size: 12px;
+}
+
+.fa-heart-fill {
+    color: #f84d4d;
+}
+
+.card-texts {
+    width: 340px;
+    margin: auto;
+    text-align: start;
+    padding: 20px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 36px -9px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.card-texts>.card-category {
+    font-size: 12px;
+    padding-bottom: 4px;
+}
+
+.card-texts>.card-title {
+    padding-bottom: 5px;
+}
+
+.card-texts>.card-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-texts>.card-price>.price {
+    color: #547C0E;
+    display: flex;
+    margin: auto 0;
+}
+
+.card-texts>.card-price>.price>p>strike {
+    margin-right: 5px;
+    color: #a5a5a5;
+}
+
+.card-price>.card-cart>.fa-shopping-cart {
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+    font-size: 15px;
+    padding: 10px;
+}
+
+#fa-cart-fill {
+    font-size: 20px;
+    background-color: #547C0E;
+    border: none;
+    color: #fff;
 }
