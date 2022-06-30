@@ -209,14 +209,6 @@ body {
     padding: 18px 135px 18px 135px;
 }
 
-.area-image-aboutus {
-    background: linear-gradient(0deg, rgba(239, 236, 205, 1) 50%, rgba(243, 241, 216, 1) 100%);
-    background-image: url("/assests/images/about-us-bg.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 60vh;
-}
-
 .area-image-about-us>.content {
     padding: 18px 135px 18px 135px;
 }
@@ -634,7 +626,8 @@ button>a {
 }
 
 .fa-star,
-.fa-envira {
+.fa-envira,
+.fa-bug {
     margin-right: 10px;
     padding: 20px;
     font-size: 20px;
@@ -1159,4 +1152,138 @@ hr {
     font-size: 14px;
     justify-content: space-between;
     padding-bottom: 20px;
+}
+
+
+/* about us css */
+
+.image-aboutus {
+    position: relative;
+    text-align: start;
+}
+
+.container>.about-center {
+    position: absolute;
+    top: 40%;
+}
+
+.about-center {
+    width: 490px;
+}
+
+.about-center>h1 {
+    font-size: 50px;
+    padding-bottom: 30px;
+}
+
+.about-center>p {
+    width: 380px;
+}
+
+.story-mission {
+    display: flex;
+    padding: 70px 0px 70px 0px;
+}
+
+.story-mission>.story {
+    padding-right: 90px;
+}
+
+.story>h1 {
+    padding-bottom: 15px;
+}
+
+.story>p {
+    color: #636363;
+}
+
+.story-mission>.mission {
+    padding-right: 90px;
+}
+
+.mission>h1 {
+    padding-bottom: 15px;
+}
+
+.mission>p {
+    color: #636363;
+}
+
+.store {
+    margin-bottom: 80px;
+}
+
+.store-images-rowone {
+    display: flex;
+    justify-content: center;
+    gap: 0px 25px;
+}
+
+.store-images_b {
+    margin: auto 0;
+    margin-top: 112px;
+}
+
+.image-a>img {
+    border-radius: 15px;
+}
+
+.image-b>img {
+    border-radius: 15px;
+}
+
+.store-images-rowtwo {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 25px;
+    padding: 0px 0px 20px 240px;
+}
+
+.store-images_c {
+    margin: auto 0;
+}
+
+.image-c>img {
+    border-radius: 15px;
+}
+
+.image-d>img {
+    border-radius: 15px;
+}
+
+.values {
+    background: #F7F9F4;
+}
+
+.values-header {
+    text-align: center;
+    padding: 40px 120px;
+}
+
+.values-content {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.content-a,
+.content-b,
+.content-c {
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 30px 30px;
+}
+
+.content-a>h3,
+.content-b>h3,
+.content-c>h3 {
+    margin: 20px 0px;
+}
+
+.content-a>.fa-star,
+.content-b>.fa-envira,
+.content-c>.fa-bug {
+    background: #FAF9F7;
 }

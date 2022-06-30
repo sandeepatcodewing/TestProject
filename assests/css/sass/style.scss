@@ -1,0 +1,128 @@
+$gap: 12px;
+$margin: auto;
+$fontSizes:( fontOne:10px, fontTwo: 16px, fontThree: 18px);
+$maxWidth: 1170px;
+$colors:(white: #fff, black: #000, main:#4E7302, secondary:#547C0E, highlight: #fab73a, icon-background:#F2F4EF, icon-color:#4a8050, heart-fill:#f84d4d, section-color:#F7F9F4, card-color:#f8eced, offer-color:#eaf4d7);
+$paddings:( paddingOne: 18px 0px);
+@font-face {
+    font-family: "monrope";
+    src: url("/assests/fonts/monrope/Manrope-Regular.woff");
+}
+
+$fontFamily: monrope;
+@function fontSizes($font-size) {
+    @return map-get($fontSizes,
+    $font-size)
+}
+
+@function paddings($padding-size) {
+    @return map-get($paddings,
+    $padding-size)
+}
+
+@function colors($colors-name) {
+    @return map-get($colors,
+    $colors-name)
+}
+
+@function paddings($padding-number) {
+    @return map-get($paddings,
+    $padding-number)
+}
+
+@mixin icon-attributes {
+    margin-right: 10px;
+    padding: 20px;
+    font-size: 20px;
+    color: colors(primary);
+    background-color: colors(icon-background);
+    border-radius: 50%;
+}
+
+@mixin container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+@mixin displayFlex {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fontFamily;
+    .top-section {
+        .top-section_bar {
+            background-color: colors(main);
+            .top-section_items {
+                @include container;
+                @include displayFlex;
+                .top-section_items_list-links {
+                    ul {
+                        gap: $gap;
+                        color: colors(white);
+                        @include displayFlex;
+                        padding: paddings(paddingOne);
+                        li {
+                            font-size: fontSizes(fontTwo);
+                            a {
+                                font-size: fontSizes(fontThree);
+                                text-decoration: none;
+                                color: colors(white);
+                            }
+                        }
+                    }
+                }
+            }
+            .top-section_contact-details {
+                ul {
+                    gap: $gap;
+                    color: colors(white);
+                    @include displayFlex;
+                    padding: paddings(paddingOne);
+                    li {
+                        .fa-phone {
+                            font-size: fontSizes(fontThree);
+                        }
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+    .logo-section {
+        @include container;
+        .menu-details {
+            @include displayFlex;
+            padding: paddings(paddingOne);
+            .loginPrice {
+                @include displayFlex;
+                .user-icon {
+                    @include displayFlex;
+                    margin: $margin;
+                    i {
+                        @include icon-attributes;
+                    }
+                }
+                .cart-icon {
+                    @include displayFlex;
+                    margin: $margin;
+                    i {
+                        @include icon-attributes;
+                    }
+                }
+                .search-icon {
+                    margin: $margin;
+                }
+            }
+        }
+    }
+}

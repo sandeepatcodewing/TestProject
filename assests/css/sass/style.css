@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "monrope";
+  src: url("/assests/fonts/monrope/Manrope-Regular.woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monrope;
+}
+body .top-section .top-section_bar {
+  background-color: #4E7302;
+}
+body .top-section .top-section_bar .top-section_items {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+body .top-section .top-section_bar .top-section_items .top-section_items_list-links ul {
+  gap: 12px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 18px 0px;
+}
+body .top-section .top-section_bar .top-section_items .top-section_items_list-links ul li {
+  font-size: 16px;
+}
+body .top-section .top-section_bar .top-section_items .top-section_items_list-links ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+}
+body .top-section .top-section_bar .top-section_contact-details ul {
+  gap: 12px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 18px 0px;
+}
+body .top-section .top-section_bar .top-section_contact-details ul li {
+  letter-spacing: 1px;
+}
+body .top-section .top-section_bar .top-section_contact-details ul li .fa-phone {
+  font-size: 18px;
+}
+body .logo-section {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+body .logo-section .menu-details {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 18px 0px;
+}
+body .logo-section .menu-details .loginPrice {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+body .logo-section .menu-details .loginPrice .user-icon {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: auto;
+}
+body .logo-section .menu-details .loginPrice .user-icon i {
+  margin-right: 10px;
+  padding: 20px;
+  font-size: 20px;
+  background-color: #F2F4EF;
+  border-radius: 50%;
+}
+body .logo-section .menu-details .loginPrice .cart-icon {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: auto;
+}
+body .logo-section .menu-details .loginPrice .cart-icon i {
+  margin-right: 10px;
+  padding: 20px;
+  font-size: 20px;
+  background-color: #F2F4EF;
+  border-radius: 50%;
+}
+body .logo-section .menu-details .loginPrice .search-icon {
+  margin: auto;
+}/*# sourceMappingURL=style.css.map */
