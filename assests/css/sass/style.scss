@@ -563,6 +563,8 @@ li {
 }
 
 .footers {
+    margin-top: 60px;
+    background-color: colors(section-color);
     .container {
         @include container;
     }
