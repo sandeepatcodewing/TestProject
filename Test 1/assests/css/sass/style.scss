@@ -1,115 +1,6 @@
-$gap: 12px;
-$margin: auto;
-$fontSizes:( fontOne:10px, fontTwo: 16px, fontThree: 18px, fontFour: 20px, fontFourtwo:24px, fontFive:40px, fontSix: 30px, fontSeven: 22px);
-$maxWidth: 1170px;
-$widths:(widthContent:490px);
-$lineHeight: 32.4px;
-$colors:(white: #fff, black: #000, main:#4E7302, secondary:#547C0E, highlight: #fab73a, icon-background:#F2F4EF, icon-color:#4a8050, heart-fill:#f84d4d, section-color:#F7F9F4, card-color:#f8eced, offer-color:#eaf4d7, sub-head:#5a5a5a, content-icon-bg:#FAF9F7, border-color: #F3F3F3, quoteColor: #E3E9D7);
-$paddings:( paddingOne: 18px 0px, paddingSearch:20px 23px, paddingRight:5px, paddingBottom:20px, padding70:70px 80px, padding90:0px 0px 0px 90px, padding30:30px 0px, padding80: 60px 90px);
-$margins:(marginNavbar:30px 0px 25px 0px, marginRight: 50px, marginSmallR: 5px, marginSmallR2:10px, marginSideC: auto 0, marginTopC: 0 auto, marginTestimonals: 0px 30px);
-$border-radius:(radius: 20px, radiusIcon:50%, bord-radius: 20px);
-$fonts:(mainFont:'Manrope', subFont:'Work Sans', headingFont:'Rubik');
-$font-weights:(weightOne: 100, weightTwo:200, weightThree: 300, weightFour: 400, weightFive: 500, weightSix: 600);
-@function fonts($fonts-type) {
-    @return map-get($fonts, $fonts-type);
-}
-
-@function fontSizes($font-size) {
-    @return map-get($fontSizes, $font-size)
-}
-
-@function font-weights($weight-number) {
-    @return map-get($font-weights, $weight-number)
-}
-
-@function border-radius ($radius-number) {
-    @return map-get($border-radius, $radius-number)
-}
-
-@function paddings($padding-size) {
-    @return map-get($paddings, $padding-size)
-}
-
-@function margins($margin-size) {
-    @return map-get($margins, $margin-size)
-}
-
-@function colors($colors-name) {
-    @return map-get($colors, $colors-name)
-}
-
-@function paddings($padding-number) {
-    @return map-get($paddings, $padding-number)
-}
-
-@function widths($width-for) {
-    @return map-get($widths, $width-for);
-}
-
-@mixin icon-attributes {
-    margin-right: 10px;
-    padding: 20px;
-    font-size: 20px;
-    color: colors(main);
-    background-color: colors(content-icon-bg);
-    border-radius: 50%;
-}
-
-@mixin button-view {
-    background-color: #fab73a;
-    border: none;
-    padding: 15px 20px;
-    font-weight: bold;
-    border-radius: 10px;
-}
-
-@mixin content-icon-attributes {
-    margin-right: 10px;
-    padding: 20px;
-    font-size: 20px;
-    color: colors(main);
-    background-color: colors(content-icon-bg);
-    border-radius: 20%;
-}
-
-@mixin navigation-icon {
-    padding: 20px;
-    font-size: 20px;
-    color: colors(black);
-    background-color: colors(icon-background);
-    border-radius: 50%;
-}
-
-@mixin container {
-    margin: 0 auto;
-    max-width: 1170px;
-}
-
-@mixin displayFlex {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-}
-
-@mixin displayCenter {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-}
-
-@mixin content-alpha {
-    border-radius: 15px;
-    background-color: #fff;
-    padding: 30px 30px;
-}
-
-@mixin button-links {
-    text-decoration: none;
-    color: colors(black);
-    font-size: fontSizes(fontThree);
-    font-weight: font-weights(weightOne);
-}
-
+@import url(/assests/css/sass/_functions.scss);
+@import url(/assests/css/sass/_mixin.scss);
+@import url(/assests/css/sass/_variable.scss);
 * {
     margin: 0;
     padding: 0;
@@ -134,7 +25,7 @@ body {
 .top-section_items_list-links {
     ul {
         gap: $gap;
-        color: colors(white);
+        color: #fff;
         @include displayFlex;
         padding: paddings(paddingOne);
         li {
@@ -142,7 +33,7 @@ body {
             a {
                 font-size: fontSizes(fontThree);
                 text-decoration: none;
-                color: colors(white);
+                color: #fff;
             }
         }
     }
@@ -151,7 +42,7 @@ body {
 .top-section_contact-details {
     ul {
         gap: $gap;
-        color: colors(white);
+        color: #fff;
         @include displayFlex;
         padding: paddings(paddingOne);
         li {
@@ -241,7 +132,7 @@ body {
 li {
     a {
         text-decoration: none;
-        color: colors(black);
+        color: #000;
         font-size: fontSizes(fontThree);
         font-weight: font-weights(weightFive);
         margin-right: margins(marginSmallR2);
@@ -305,7 +196,7 @@ li {
 .story>p {
     max-width: 460px;
     line-height: $lineHeight;
-    color: colors(sub-head);
+    color: #5a5a5a;
     font-size: fontSizes(fontThree);
 }
 
@@ -317,7 +208,7 @@ li {
 .mission>p {
     max-width: 460px;
     line-height: $lineHeight;
-    color: colors(sub-head);
+    color: #5a5a5a;
     font-size: fontSizes(fontThree);
 }
 
@@ -463,12 +354,12 @@ li {
 
 .testimonals-content {
     margin: margins(marginTestimonals);
-    border: 0.3px solid colors(border-color);
+    border: 0.3px solid #F3F3F3;
     border-radius: border-radius(bord-radius);
     padding: paddings(padding80);
     max-height: 350px;
     .fa-quote-left {
-        color: colors(quoteColor);
+        color: #E3E9D7;
         font-size: fontSizes(fontSix);
         padding-bottom: 20px;
     }
@@ -509,7 +400,7 @@ li {
         @include button-view;
         a {
             text-decoration: none;
-            color: colors(black);
+            color: #000;
             font-size: fontSizes(fontThree);
             font-weight: font-weights(weightOne);
         }
@@ -527,6 +418,7 @@ li {
     position: relative;
     background-color: #eaf4d7;
     text-align: center;
+    #percentage-off {}
 }
 
 .percentage-off_text-centered {
@@ -617,4 +509,5 @@ hr {
 .copywright {
     @include displayFlex;
     padding-bottom: paddings(paddingBottom);
+    font-size: fontSizes(fontTwo);
 }

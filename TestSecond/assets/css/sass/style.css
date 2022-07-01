@@ -1,0 +1,29 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  text-align: center;
+  padding: 16px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+}
+.columns .rows {
+  padding: 20px;
+  color: #fff;
+  background-color: #32a89d;
+}/*# sourceMappingURL=style.css.map */

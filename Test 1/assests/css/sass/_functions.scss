@@ -1,0 +1,35 @@
+@function fonts($fonts-type) {
+    @return map-get($fonts, $fonts-type);
+}
+
+@function fontSizes($font-size) {
+    @return map-get($fontSizes, $font-size)
+}
+
+@function font-weights($weight-number) {
+    @return map-get($font-weights, $weight-number)
+}
+
+@function border-radius ($radius-number) {
+    @return map-get($border-radius, $radius-number)
+}
+
+@function paddings($padding-size) {
+    @return map-get($paddings, $padding-size)
+}
+
+@function margins($margin-size) {
+    @return map-get($margins, $margin-size)
+}
+
+@function colors($colors-name) {
+    @return map-get($colors, $colors-name)
+}
+
+@function paddings($padding-number) {
+    @return map-get($paddings, $padding-number)
+}
+
+@function widths($width-for) {
+    @return map-get($widths, $width-for);
+}

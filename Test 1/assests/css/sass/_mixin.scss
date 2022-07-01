@@ -1,0 +1,63 @@
+@mixin icon-attributes {
+    margin-right: 10px;
+    padding: 20px;
+    font-size: 20px;
+    color: colors(main);
+    background-color: #FAF9F7;
+    border-radius: 50%;
+}
+
+@mixin button-view {
+    background-color: #fab73a;
+    border: none;
+    padding: 15px 20px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+@mixin content-icon-attributes {
+    margin-right: 10px;
+    padding: 20px;
+    font-size: 20px;
+    color: colors(main);
+    background-color: #FAF9F7;
+    border-radius: 20%;
+}
+
+@mixin navigation-icon {
+    padding: 20px;
+    font-size: 20px;
+    color: colors(black);
+    background-color: colors(icon-background);
+    border-radius: 50%;
+}
+
+@mixin container {
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+@mixin displayFlex {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+@mixin displayCenter {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+@mixin content-alpha {
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 30px 30px;
+}
+
+@mixin button-links {
+    text-decoration: none;
+    color: colors(black);
+    font-size: fontSizes(fontThree);
+    font-weight: font-weights(weightOne);
+}

@@ -1,0 +1,38 @@
+$number:6;
+@mixin container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+@mixin columns {
+    display: grid;
+    grid-template-columns: repeat($number, 1fr);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    padding: 16px;
+}
+
+.container {
+    @include container;
+}
+
+.columns {
+    @include columns;
+    gap: 15px;
+    .rows {
+        padding: 20px;
+        color: #fff;
+        background-color: #32a89d;
+    }
+}

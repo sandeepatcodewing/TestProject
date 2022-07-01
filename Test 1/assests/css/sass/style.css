@@ -465,7 +465,6 @@ li a {
   background-color: #eaf4d7;
   text-align: center;
 }
-
 .percentage-off_text-centered {
   position: absolute;
   top: 45%;
@@ -558,4 +557,5 @@ hr {
   justify-content: space-between;
   list-style-type: none;
   padding-bottom: 20px;
+  font-size: 16px;
 }/*# sourceMappingURL=style.css.map */
