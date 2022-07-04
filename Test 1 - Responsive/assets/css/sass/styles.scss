@@ -32,7 +32,7 @@
 .container{ 
     @include small-mobile-view{
         margin: auto;
-        max-width: 460px;
+        max-width: 340px;
     }
    
     @include mobile-view{
@@ -188,6 +188,14 @@
     @include tablet-view{
         display: none;
     }
+    @include small-desktop-view{
+        display: flex;
+        padding: 0.5rem 0rem 1.5rem 0rem;
+    }
+    @include desktop-view{
+        display: flex;
+        font-size: 1.2rem;
+    }
 }
 
 .navbar-items{
@@ -295,13 +303,13 @@
     @include desktop-view{
         top: 20%;
         position:absolute;
-        max-width: 420px;
+        max-width: 410px;
         h1{
             font-size: 4rem;
         }
 
         p{
-            padding: 1.5rem 0rem;
+            padding: 2.3rem 0rem;
             font-size: 1.2rem;
             font-weight: 600;
         }

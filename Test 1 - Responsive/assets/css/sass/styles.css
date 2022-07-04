@@ -57,7 +57,7 @@ button {
 @media (min-width: 210px) {
   .container {
     margin: auto;
-    max-width: 460px;
+    max-width: 340px;
   }
 }
 @media (min-width: 576px) {
@@ -186,6 +186,7 @@ button {
   padding: 20px;
   border-radius: 50%;
   background-color: #F2F4EF;
+  color: #4E7302;
 }
 
 .login-icon_texts {
@@ -206,6 +207,7 @@ button {
   padding: 20px;
   border-radius: 50%;
   background-color: #F2F4EF;
+  color: #4E7302;
 }
 
 .cart-icon_texts {
@@ -240,6 +242,18 @@ button {
 @media (min-width: 768px) {
   .items-list {
     display: none;
+  }
+}
+@media (min-width: 992px) {
+  .items-list {
+    display: flex;
+    padding: 0.5rem 0rem 1.5rem 0rem;
+  }
+}
+@media (min-width: 1200px) {
+  .items-list {
+    display: flex;
+    font-size: 1.2rem;
   }
 }
 
@@ -349,13 +363,13 @@ button {
   .banner-image_items {
     top: 20%;
     position: absolute;
-    max-width: 420px;
+    max-width: 410px;
   }
   .banner-image_items h1 {
     font-size: 4rem;
   }
   .banner-image_items p {
-    padding: 1.5rem 0rem;
+    padding: 2.3rem 0rem;
     font-size: 1.2rem;
     font-weight: 600;
   }
