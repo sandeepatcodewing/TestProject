@@ -379,4 +379,61 @@ button {
     padding: 1rem 1.3rem;
     font-size: 1rem;
   }
+}
+
+@media (min-width: 1200px) {
+  .features-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 3.6rem 4.3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .list-shipping {
+    display: flex;
+    justify-content: space-between;
+  }
+  .list-shipping i {
+    font-size: 1.8rem;
+    padding: 20px;
+    border-radius: 25%;
+    background-color: #F2F4EF;
+    color: #4E7302;
+  }
+}
+
+@media (min-width: 1200px) {
+  .list-team {
+    display: flex;
+    justify-content: space-between;
+  }
+  .list-team i {
+    font-size: 1.8rem;
+    padding: 20px;
+    border-radius: 25%;
+    background-color: #F2F4EF;
+    color: #4E7302;
+  }
+}
+
+@media (min-width: 1200px) {
+  .list-payment {
+    display: flex;
+    justify-content: space-between;
+  }
+  .list-payment i {
+    font-size: 1.8rem;
+    padding: 20px;
+    border-radius: 25%;
+    background-color: #F2F4EF;
+    color: #4E7302;
+  }
+  .list-payment .fa-credit-card-alt {
+    font-size: 1.3rem;
+  }
+}
+
+.feature-text {
+  margin: auto;
 }/*# sourceMappingURL=styles.css.map */

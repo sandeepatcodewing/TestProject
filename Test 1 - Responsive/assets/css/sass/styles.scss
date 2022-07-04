@@ -141,7 +141,7 @@
 
 .login-icon{
     margin: auto;
-    @include background-icons;
+    @include login-icons;
 }
 
 .login-icon_texts{
@@ -156,7 +156,7 @@
 
 .cart-icon{
     margin: auto;
-    @include background-icons;
+    @include login-icons;
 }
 
 .cart-icon_texts{
@@ -320,4 +320,39 @@
             font-size: 1rem;
         }
     }
+}
+
+.features-list{
+    @include desktop-view{
+        @include space-between;
+        padding: 3.6rem 4.3rem;
+    }
+}
+
+.list-shipping{
+    @include desktop-view{
+        @include space-between;
+        @include feature-icons;
+    }
+}
+
+.list-team{
+    @include desktop-view{
+        @include space-between;
+        @include feature-icons;
+    }
+}
+
+.list-payment{
+    @include desktop-view{
+        @include space-between;
+        @include feature-icons;
+        .fa-credit-card-alt{
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.feature-text{
+    margin: auto;
 }

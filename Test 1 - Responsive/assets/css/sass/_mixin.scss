@@ -35,11 +35,21 @@
 }
 
 
-@mixin background-icons{
+@mixin login-icons{
     i{
         font-size: 18px;
         padding: 20px;
         border-radius: 50%;
+        background-color: #F2F4EF;
+        color: colors(primary);
+    }
+}
+
+@mixin feature-icons{
+    i{
+        font-size: 1.8rem;
+        padding: 20px;
+        border-radius: 25%;
         background-color: #F2F4EF;
         color: colors(primary);
     }
