@@ -1,29 +1,32 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Poppins", sans-serif;
 }
 
-h2 {
-  text-align: center;
-  padding: 16px;
+.items {
+  background-color: rgb(111, 186, 236);
+  height: 70vh;
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1170px;
+  margin: auto;
 }
 
-.columns {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+.lists {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
   gap: 15px;
 }
-.columns .rows {
-  padding: 20px;
-  color: #fff;
-  background-color: #32a89d;
+@media screen and (max-width: 460px) {
+  .lists {
+    display: block;
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */

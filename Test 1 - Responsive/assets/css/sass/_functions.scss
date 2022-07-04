@@ -1,0 +1,11 @@
+@function colors($color-name){
+    @return map-get($colors, $color-name);
+}
+
+@function tablet-view($break-range){
+    @return map-get($tablet-view, $break-range);
+}
+
+@function mobile-view($break-point){
+    @return map-get($mobile-view, $break-point);
+}

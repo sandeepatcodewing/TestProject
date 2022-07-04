@@ -1,0 +1,15 @@
+flex-grow: We can understand in this way: if there is 5 items then flex grow helps to change width/size of an specific items.
+
+
+If i want to change the size of items 4 then
+
+.items-4{
+flex-grow: 5;
+}
+
+
+flex-wrap: nowrap; : nowrap is DEFAULT helps to show desired items in one line even after resizing the browser view.
+
+flex-wrap: wrap; wrap helps items to break the line and go to the second line when/after resizing the browser view.
+
+there is another one inside types of wrap i.e. wrap-reverse

@@ -1,0 +1,12 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    font-size: 18px;
+}
+
+.container>p {
+    font-size: 1em;
+}

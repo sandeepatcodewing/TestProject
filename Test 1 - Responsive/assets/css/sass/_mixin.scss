@@ -1,0 +1,32 @@
+@mixin mobile-view{
+    @media (min-width: mobile-view(minWidth)) and (max-width: mobile-view(maxWidth)){
+        @content;
+    }
+}
+
+@mixin tablet-view{
+    @media (min-width: tablet-view(minWidth))and (max-width: tablet-view(maxWidth)){
+        @content;
+    }
+}
+
+@mixin desktop-view{
+    @media screen and (max-width: $desktop-view){
+        @content;
+    }
+}
+
+@mixin space-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@mixin background-icons{
+    i{
+        font-size: 18px;
+        padding: 20px;
+        border-radius: 50%;
+        background-color: #F2F4EF;
+    }
+}
