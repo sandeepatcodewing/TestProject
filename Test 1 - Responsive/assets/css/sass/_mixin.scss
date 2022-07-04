@@ -1,17 +1,30 @@
+@mixin small-mobile-view{
+    @media (min-width: $small-mobile-view){
+        @content;
+    }
+}
+
+
 @mixin mobile-view{
-    @media (min-width: mobile-view(minWidth)) and (max-width: mobile-view(maxWidth)){
+    @media (min-width: $mobile-view){
         @content;
     }
 }
 
 @mixin tablet-view{
-    @media (min-width: tablet-view(minWidth))and (max-width: tablet-view(maxWidth)){
+    @media (min-width: $tablet-view){
+        @content;
+    }
+}
+
+@mixin small-desktop-view{
+    @media (min-width: $small-desktop-view){
         @content;
     }
 }
 
 @mixin desktop-view{
-    @media screen and (max-width: $desktop-view){
+    @media (min-width: $desktop-view){
         @content;
     }
 }
