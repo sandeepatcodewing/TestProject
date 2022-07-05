@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
   <body>
-    <!-- social media + contact section -->
-    <section class="top-section">
-      <div class="section-top">
+    <header>
+      <!-- social media + contact section -->
+      <section class="top-section">
         <div class="container">
-          <div class="section-top_items">
-            <div class="top_items_media">
+          <div class="top-section_items">
+            <div class="top-section_items_social">
               <ul>
                 <li>
                   <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
@@ -33,7 +33,7 @@
                 </li>
               </ul>
             </div>
-            <div class="top_items_contact">
+            <div class="top-section_items_mail">
               <ul>
                 <li id="phone">
                   <i class="fa fa-phone" aria-hidden="true"></i>
@@ -46,123 +46,225 @@
               </ul>
             </div>
           </div>
-        </div>
+
       </div>
-    </section>
+      </section>
 
-    <!-- logo + login section -->
-    <section class="section-logo-items">
-      <div class="container">
-        <div class="section-logo_account">
-          <div class="section-logo">
-            <img src="/assets/images/logo/logo.png" alt="Organic Store - Logo" />
-          </div>
-          <div class="hamburger-icon">
-            <input type="checkbox" id="check" />
-            <label for="check"></label>
-            <i class="fa fa-bars" aria-hidden="true"></i>
-          </div>
-          <div class="section-account">
-            <div class="section-login">
-              <div class="login-icon">
-                <i class="fa fa-user" aria-hidden="true"></i>
-              </div>
-              <div class="login-icon_texts">
-                <p>My Account</p>
-                <p><b>Login/Register</b></p>
-              </div>
+      <!-- logo + login section -->
+      <section class="login">
+        <div class="container">
+          <div class="login-items">
+            <div class="login-items_logo">
+              <img src="/assets/images/logo/logo.png" alt="Organic Store - Logo" />
             </div>
-
-            <div class="section-cart">
-              <div class="cart-icon">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-              </div>
-              <div class="cart-icon_texts">
-                <p>Total</p>
-                <p><b>$0.00</b></p>
-              </div>
+            <div class="login-items_hamburger">
+              <i class="fa fa-bars" aria-hidden="true"></i>
             </div>
-            <div class="section-search">
-              <i class="fa fa-search" aria-hidden="true"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="login-items_details">
+              <div class="login-items_details_user">
+                <div class="login-items_details_user_icon">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <div class="login-items_details_user_texts">
+                  <p>My Account</p>
+                  <p><b>Login/Register</b></p>
+                </div>
+              </div>
 
-    <!-- Navbar -->
-    <section class="navbar-items">
-      <div class="container">
-        <div class="items-list">
-          <nav class="navbar">
-            <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Products</li>
-              <li>Shop</li>
-              <li>Blog</li>
-              <li>Contact</li>
-            </ul>
-          </nav>
-          <div class="items_phone">
-            <b><i class="fa fa-phone" aria-hidden="true"></i></b>
-            <b>1-22-456-446</b>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <main>
-      <!-- banner image -->
-      <section>
-        <div class="banner-image">
-          <img src="/assets/images/banner/banner.png" alt="Banner Image" width="100%" />
-          <div class="container">
-            <div class="banner-image_items">
-              <h1>Fresh Organic Vegetables at Your Table.</h1>
-
-              <p>Start your morning with healthy breakfast right at your table.</p>
-
-              <button>
-                Shop Now
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-              </button>
+              <div class="login-items_details_cart">
+                <div class="login-items_details_cart_icon">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </div>
+                <div class="login-items_details_cart_texts">
+                  <p>Total</p>
+                  <p><b>$0.00</b></p>
+                </div>
+              </div>
+              <div class="login-items_details_search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- features list -->
+      <!-- Navbar -->
+      <section class="navbar">
+        <div class="container">
+          <div class="navbar-items">
+            <nav class="navbar-items_menu">
+              <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>
+                  Products
+                  <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                </li>
+                <li>
+                  Shop
+                  <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                </li>
+                <li>Blog</li>
+                <li>Contact</li>
+              </ul>
+            </nav>
+            <div class="navbar-items_phone">
+              <span><i class="fa fa-phone" aria-hidden="true"></i></b></span>
+              <span><b>1-22-456-446</b></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>    
+      <!-- banner image -->
+      <section class="banner">
+            <div class="container">
+              <div class="banner-content">
+                <h1>fresh organic vegetables at your table</h1>
+              <p><b>Start your morning with healthy breakfast 
+                right at your table.</b></p>
+                <button class="banner-content_btn-shop-all"><span>Shop Now</span> <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+            </div>
+          </div>
+      </section>
+
+      <!-- feature list -->
       <section class="features">
         <div class="container">
-          <div class="features-list">
-            <!-- Free Shipping -->
-            <div class="list-shipping">
-              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-              <div class="feature-text">
-                <p><b>Free Shipping</b></p>
-                <p>On all orders within 50 KM</p>
-              </div>
+            <div class="features-list">
+                <div class="features-list_content">
+                    <div class="features-list_content_item feature-cart">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <div class="features-list_content_text">
+                            <p><b>Free Shipping</b></p>
+                            <p>On all orders within 50 KM</p>
+                        </div>
+                    </div>
+
+                    <div class="features-list_content_item feature-team">
+                        <i class="fa fa-headphones" aria-hidden="true"></i>
+                        <div class="features-list_content_text">
+                            <p><b>24/7 Support Team</b></p>
+                            <p>We are here to help you</p>
+                        </div>
+                    </div>
+
+                    <div class="features-list_content_item feature-cart">
+                        <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                        <div class="features-list_content_text">
+                            <p><b>Online Payment</b></p>
+                            <p>Various Payment Option</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- Share Team -->
-            <div class="list-team">
-              <i class="fa fa-headphones" aria-hidden="true"></i>
-              <div class="feature-text">
-                <p><b>24/7 Support Team</b></p>
-                <p>We are here to help you</p>
-              </div>
-            </div>
-            <!-- Online Payment -->
-            <div class="list-payment">
-              <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
-              <div class="feature-text">
-                <p><b>Online Payment</b></p>
-                <p>Various Payment Option</p>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
+    </section>
+
+    <!-- new arrival -->
+    <section class="arrival">
+      <div class="container">
+          <div class="arrival-context">
+              <h1>New Arrival</h1>
+              <p>Check out what's new with us!</p>
+
+              <div class="arrival-context_menu">
+                  <ul>
+                      <li class="active">All</li>
+                      <li>Vegetables</li>
+                      <li>Fruits</li>
+                      <li>Meats</li>
+                      <li>Dry Fruits</li>
+                      <li>Seasonal</li>
+                  </ul>
+              </div>
+
+              <div class="arrival-context_list">
+                  <div class="arrival-context_list_card">
+                      <img src="/assets/images/arrival/apple.png" width="100%" />
+                      <div class="left-align_category sale-category">SALE</div>
+                      <div class="arrival-context_list_card_category">
+                          <p>Fruits</p>
+                      </div>
+                      <div class="arrival-context_list_card_title">
+                          <p><b>Mustand Organic Apple</b></p>
+                      </div>
+                      <div class="arrival-context_list_card_price price-all">
+                          <p><strike>$250</strike></p>
+                          <p><b>$200</b></p>
+                      </div>
+                  </div>
+
+                  <div class="arrival-context_list_card">
+                      <img src="/assets/images/arrival/Potato.png" width="100%" />
+                      <div class="left-align_category seasonal-category">SEASONAL</div>
+                      <div class="hover-items">
+                          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                          <i class="fa fa-eye" aria-hidden="true"></i>
+                          <i class="fa fa-heart" aria-hidden="true"></i>
+                      </div>
+                      <div class="arrival-context_list_card_category">
+                          <p>Vegetable</p>
+                      </div>
+                      <div class="arrival-context_list_card_title">
+                          <p><b>Nordic Potatoes</b></p>
+                      </div>
+                      <div class="arrival-context_list_card_price price-all">
+                          <p><strike>$250</strike></p>
+                          <p><b>$200</b></p>
+                      </div>
+                  </div>
+
+                  <div class="arrival-context_list_card">
+                      <img src="/assets/images/arrival/leaf.png" width="100%" />
+                      <div class="left-align_category featured-category">FEATURED</div>
+                      <div class="arrival-context_list_card_category">
+                          <p>Vegetable</p>
+                      </div>
+                      <div class="arrival-context_list_card_title">
+                          <p><b>Farm fresh spanich</b></p>
+                      </div>
+                      <div class="arrival-context_list_card_price price-all">
+                          <p><b>$24.99</b></p>
+                      </div>
+                  </div>
+
+                  <div class="arrival-context_list_card">
+                      <img src="/assets/images/arrival/brinjal.png" width="100%" />
+                      <div class="left-align_category featured-category">FEATURED</div>
+                      <div class="brinjal-content">
+                          <div class="arrival-context_list_card_category">
+                              <p>Vegetable</p>
+                          </div>
+                          <div class="arrival-context_list_card_title">
+                              <p><b>Seasonal Brinjal</b></p>
+                          </div>
+                          <div class="arrival-context_list_card_price price-all sold-out">
+                              <p><b>$200</b></p>
+                              <p>SOLD OUT</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="arrival-context three-dots">
+                  <span class="three-dots_dot"></span>
+                  <span class="three-dots_dot_active"></span>
+                  <span class="three-dots_dot"></span>
+              </div>
+
+              <div class="button-view-all">
+                  <button>
+                  View all Products
+              <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+        </button>
+              </div>
+          </div>
+      </div>
+  </section>
+
     </main>
   </body>
 </html>
