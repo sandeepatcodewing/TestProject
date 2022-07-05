@@ -220,9 +220,7 @@
 
 .features-list_content{
     padding: 56px 70px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 15px;
+    @include flex-between;
     @include feature-icons;
     &_item{
         @include flex-between;
@@ -237,10 +235,7 @@
         padding-left: 16px;
     }
     @include mobile-view{
-        display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    column-gap: 15px;
-    row-gap: 16px;
+        @include grid-center;
         &_item{
             @include grid-center;
             text-align: center;
@@ -257,9 +252,7 @@
     }
 
     @include tablet-view{
-        display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 15px;
+        @include grid-center;
         .feature-cart{
             padding-bottom: 15px;
         }

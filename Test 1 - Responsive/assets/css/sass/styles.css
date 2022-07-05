@@ -289,10 +289,8 @@ button {
 
 .features-list_content {
   padding: 56px 70px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  -moz-column-gap: 15px;
-       column-gap: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 .features-list_content i {
   padding: 20px;
@@ -316,10 +314,7 @@ button {
 @media only screen and (max-width: 600px) {
   .features-list_content {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    -moz-column-gap: 15px;
-         column-gap: 15px;
-    row-gap: 16px;
+    justify-content: center;
   }
   .features-list_content_item {
     display: grid;
@@ -339,9 +334,7 @@ button {
 @media (min-width: 601px) and (max-width: 991px) {
   .features-list_content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    -moz-column-gap: 15px;
-         column-gap: 15px;
+    justify-content: center;
   }
   .features-list_content .feature-cart {
     padding-bottom: 15px;
