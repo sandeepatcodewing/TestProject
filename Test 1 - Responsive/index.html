@@ -10,6 +10,11 @@
     <link href="https://fonts.googleapis.com/css?family=Work Sans" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header>
@@ -161,110 +166,616 @@
                 </div>
             </div>
         </div>
-    </section>
+      </section>
 
-    <!-- new arrival -->
-    <section class="arrival">
-      <div class="container">
-          <div class="arrival-context">
-              <h1>New Arrival</h1>
-              <p>Check out what's new with us!</p>
+      <!-- new arrival
+      <section class="arrival">
+        <div class="container">
+            <div class="arrival-context">
+                <h1>New Arrival</h1>
+                <p>Check out what's new with us!</p>
 
-              <div class="arrival-context_menu">
-                  <ul>
-                      <li class="active">All</li>
-                      <li>Vegetables</li>
-                      <li>Fruits</li>
-                      <li>Meats</li>
-                      <li>Dry Fruits</li>
-                      <li>Seasonal</li>
-                  </ul>
-              </div>
+                <div class="arrival-context_menu">
+                        <ul>
+                          <li class="active-link">All</li>
+                        <li>Vegetables</li>
+                        <li>Fruits</li>
+                        <li>Meats</li>
+                        <li>Dry Fruits</li>
+                        <li>Seasonal</li>
+                        </ul>
+                </div>
 
-              <div class="arrival-context_list">
-                  <div class="arrival-context_list_card">
-                      <img src="/assets/images/arrival/apple.png" width="100%" />
-                      <div class="left-align_category sale-category">SALE</div>
-                      <div class="arrival-context_list_card_category">
-                          <p>Fruits</p>
+                <div class="arrival-context_list">
+                    <div class="arrival-context_list_card">
+                        <img src="/assets/images/arrival/apple.png" width="100%" />
+                        <div class="left-align_category sale-category">SALE</div>
+                        <div class="arrival-context_list_card_category">
+                            <p>Fruits</p>
+                        </div>
+                        <div class="arrival-context_list_card_title">
+                            <p><b>Mustand Organic Apple</b></p>
+                        </div>
+                        <div class="arrival-context_list_card_price price-all">
+                            <p><strike>$250</strike></p>
+                            <p><b>$200</b></p>
+                        </div>
+                    </div>
+
+                    <div class="arrival-context_list_card">
+                        <img src="/assets/images/arrival/Potato.png" width="100%" />
+                        <div class="left-align_category seasonal-category">SEASONAL</div>
+                        <div class="hover-items">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </div>
+                        <div class="arrival-context_list_card_category">
+                            <p>Vegetable</p>
+                        </div>
+                        <div class="arrival-context_list_card_title">
+                            <p><b>Nordic Potatoes</b></p>
+                        </div>
+                        <div class="arrival-context_list_card_price price-all">
+                            <p><strike>$250</strike></p>
+                            <p><b>$200</b></p>
+                        </div>
+                    </div>
+
+                    <div class="arrival-context_list_card">
+                        <img src="/assets/images/arrival/leaf.png" width="100%" />
+                        <div class="left-align_category featured-category">FEATURED</div>
+                        <div class="arrival-context_list_card_category">
+                            <p>Vegetable</p>
+                        </div>
+                        <div class="arrival-context_list_card_title">
+                            <p><b>Farm fresh spanich</b></p>
+                        </div>
+                        <div class="arrival-context_list_card_price price-all">
+                            <p><b>$24.99</b></p>
+                        </div>
+                    </div>
+
+                    <div class="arrival-context_list_card">
+                        <img src="/assets/images/arrival/brinjal.png" width="100%" />
+                        <div class="left-align_category featured-category">FEATURED</div>
+                        <div class="brinjal-content">
+                            <div class="arrival-context_list_card_category">
+                                <p>Vegetable</p>
+                            </div>
+                            <div class="arrival-context_list_card_title">
+                                <p><b>Seasonal Brinjal</b></p>
+                            </div>
+                            <div class="arrival-context_list_card_price price-all sold-out">
+                                <p><b>$200</b></p>
+                                <p>SOLD OUT</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arrival-context three-dots">
+                    <span class="three-dots_dot"></span>
+                    <span class="three-dots_dot_active"></span>
+                    <span class="three-dots_dot"></span>
+                </div>
+
+                <div class="button-view-all">
+                    <button>
+                    View all Products
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+          </button>
+                </div>
+            </div>
+        </div>
+      </section> -->
+
+      <!-- new arrival using swiper js-->
+      <section class="arrival">
+        <div class="container">
+            <div class="arrival-context">
+                <h1>New Arrival</h1>
+                <p>Check out what's new with us!</p>
+
+                <div class="arrival-context_menu">
+                        <ul>
+                          <li class="active-link">All</li>
+                        <li>Vegetables</li>
+                        <li>Fruits</li>
+                        <li>Meats</li>
+                        <li>Dry Fruits</li>
+                        <li>Seasonal</li>
+                        </ul>
+                </div>
+
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="arrival-context_list_card">
+                        <img src="/assets/images/arrival/apple.png" width="100%" />
+                        <div class="left-align_category sale-category">SALE</div>
+                        <div class="arrival-context_list_card_category">
+                            <p>Fruits</p>
+                        </div>
+                        <div class="arrival-context_list_card_title">
+                            <p><b>Mustand Organic Apple</b></p>
+                        </div>
+                        <div class="arrival-context_list_card_price price-all">
+                            <p><strike>$250</strike></p>
+                            <p><b>$200</b></p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="arrival-context_list_card">
+                        <img src="/assets/images/arrival/Potato.png" width="100%" />
+                        <div class="left-align_category seasonal-category">SEASONAL</div>
+                        <div class="hover-items">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </div>
+                        <div class="arrival-context_list_card_category">
+                            <p>Vegetable</p>
+                        </div>
+                        <div class="arrival-context_list_card_title">
+                            <p><b>Nordic Potatoes</b></p>
+                        </div>
+                        <div class="arrival-context_list_card_price price-all">
+                            <p><strike>$250</strike></p>
+                            <p><b>$200</b></p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="arrival-context_list_card">
+                        <img src="/assets/images/arrival/leaf.png" width="100%" />
+                        <div class="left-align_category featured-category">FEATURED</div>
+                        <div class="arrival-context_list_card_category">
+                            <p>Vegetable</p>
+                        </div>
+                        <div class="arrival-context_list_card_title">
+                            <p><b>Farm fresh spanich</b></p>
+                        </div>
+                        <div class="arrival-context_list_card_price price-all">
+                            <p><b>$24.99</b></p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="arrival-context_list_card">
+                        <img src="/assets/images/arrival/brinjal.png" width="100%" />
+                        <div class="left-align_category featured-category">FEATURED</div>
+                        <div class="brinjal-content">
+                            <div class="arrival-context_list_card_category">
+                                <p>Vegetable</p>
+                            </div>
+                            <div class="arrival-context_list_card_title">
+                                <p><b>Seasonal Brinjal</b></p>
+                            </div>
+                            <div class="arrival-context_list_card_price price-all sold-out">
+                                <p><b>$200</b></p>
+                                <p>SOLD OUT</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="arrival-context_list_card">
+                        <img src="/assets/images/arrival/apple.png" width="100%" />
+                        <div class="left-align_category sale-category">SALE</div>
+                        <div class="arrival-context_list_card_category">
+                            <p>Fruits</p>
+                        </div>
+                        <div class="arrival-context_list_card_title">
+                            <p><b>Mustand Organic Apple</b></p>
+                        </div>
+                        <div class="arrival-context_list_card_price price-all">
+                            <p><strike>$250</strike></p>
+                            <p><b>$200</b></p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="arrival-context_list_card">
+                        <img src="/assets/images/arrival/Potato.png" width="100%" />
+                        <div class="left-align_category seasonal-category">SEASONAL</div>
+                        <div class="hover-items">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </div>
+                        <div class="arrival-context_list_card_category">
+                            <p>Vegetable</p>
+                        </div>
+                        <div class="arrival-context_list_card_title">
+                            <p><b>Nordic Potatoes</b></p>
+                        </div>
+                        <div class="arrival-context_list_card_price price-all">
+                            <p><strike>$250</strike></p>
+                            <p><b>$200</b></p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="arrival-context_list_card">
+                        <img src="/assets/images/arrival/leaf.png" width="100%" />
+                        <div class="left-align_category featured-category">FEATURED</div>
+                        <div class="arrival-context_list_card_category">
+                            <p>Vegetable</p>
+                        </div>
+                        <div class="arrival-context_list_card_title">
+                            <p><b>Farm fresh spanich</b></p>
+                        </div>
+                        <div class="arrival-context_list_card_price price-all">
+                            <p><b>$24.99</b></p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="arrival-context_list_card">
+                        <img src="/assets/images/arrival/brinjal.png" width="100%" />
+                        <div class="left-align_category featured-category">FEATURED</div>
+                        <div class="brinjal-content">
+                            <div class="arrival-context_list_card_category">
+                                <p>Vegetable</p>
+                            </div>
+                            <div class="arrival-context_list_card_title">
+                                <p><b>Seasonal Brinjal</b></p>
+                            </div>
+                            <div class="arrival-context_list_card_price price-all sold-out">
+                                <p><b>$200</b></p>
+                                <p>SOLD OUT</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="arrival-context_list_card">
+                        <img src="/assets/images/arrival/brinjal.png" width="100%" />
+                        <div class="left-align_category featured-category">FEATURED</div>
+                        <div class="brinjal-content">
+                            <div class="arrival-context_list_card_category">
+                                <p>Vegetable</p>
+                            </div>
+                            <div class="arrival-context_list_card_title">
+                                <p><b>Seasonal Brinjal</b></p>
+                            </div>
+                            <div class="arrival-context_list_card_price price-all sold-out">
+                                <p><b>$200</b></p>
+                                <p>SOLD OUT</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>  
+                  </div>
+                </div>
+                <div class="button-view-all">
+                    <button>
+                    View all Products
+                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+              <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+
+
+      <!-- Hottest Categories Widget -->
+      <section class="hottest">
+      <div class="hottest-category">
+          <div class="container">
+              <h1>Hottest Categories</h1>
+
+              <div class="hottest-category_cards">
+                  <div class="hottest-category_cards_items">
+                      <img src="/assets/images/hottest-category/Image.png"/>
+                      <div class="hottest-category_cards_items_text">
+                          Organic Vegetables
+                          <i>(50 Products)</i>
                       </div>
-                      <div class="arrival-context_list_card_title">
-                          <p><b>Mustand Organic Apple</b></p>
-                      </div>
-                      <div class="arrival-context_list_card_price price-all">
-                          <p><strike>$250</strike></p>
-                          <p><b>$200</b></p>
+                      <div class="hottest-category_cards_items_button">
+                          Shop Now
+                          <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                       </div>
                   </div>
 
-                  <div class="arrival-context_list_card">
-                      <img src="/assets/images/arrival/Potato.png" width="100%" />
-                      <div class="left-align_category seasonal-category">SEASONAL</div>
-                      <div class="hover-items">
-                          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                          <i class="fa fa-eye" aria-hidden="true"></i>
-                          <i class="fa fa-heart" aria-hidden="true"></i>
+                  <div class="hottest-category_cards_items">
+                      <img src="/assets/images/hottest-category/fruits.png" />
+                      <div class="hottest-category_cards_items_text">
+                          Farm fresh fruits
+                          <i>(5 Products)</i>
                       </div>
-                      <div class="arrival-context_list_card_category">
-                          <p>Vegetable</p>
-                      </div>
-                      <div class="arrival-context_list_card_title">
-                          <p><b>Nordic Potatoes</b></p>
-                      </div>
-                      <div class="arrival-context_list_card_price price-all">
-                          <p><strike>$250</strike></p>
-                          <p><b>$200</b></p>
+                      <div class="hottest-category_cards_items_button">
+                          Shop Now
+                          <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                       </div>
                   </div>
 
-                  <div class="arrival-context_list_card">
-                      <img src="/assets/images/arrival/leaf.png" width="100%" />
-                      <div class="left-align_category featured-category">FEATURED</div>
-                      <div class="arrival-context_list_card_category">
-                          <p>Vegetable</p>
+                  <div class="hottest-category_cards_items">
+                      <img src="/assets/images/hottest-category/pickup.png" />
+                      <div class="hottest-category_cards_items_text">
+                          Dry Fruits
+                          <i>(18 Products)</i>
                       </div>
-                      <div class="arrival-context_list_card_title">
-                          <p><b>Farm fresh spanich</b></p>
-                      </div>
-                      <div class="arrival-context_list_card_price price-all">
-                          <p><b>$24.99</b></p>
+                      <div class="hottest-category_cards_items_button">
+                          Shop Now
+                          <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                       </div>
                   </div>
-
-                  <div class="arrival-context_list_card">
-                      <img src="/assets/images/arrival/brinjal.png" width="100%" />
-                      <div class="left-align_category featured-category">FEATURED</div>
-                      <div class="brinjal-content">
-                          <div class="arrival-context_list_card_category">
-                              <p>Vegetable</p>
-                          </div>
-                          <div class="arrival-context_list_card_title">
-                              <p><b>Seasonal Brinjal</b></p>
-                          </div>
-                          <div class="arrival-context_list_card_price price-all sold-out">
-                              <p><b>$200</b></p>
-                              <p>SOLD OUT</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="arrival-context three-dots">
-                  <span class="three-dots_dot"></span>
-                  <span class="three-dots_dot_active"></span>
-                  <span class="three-dots_dot"></span>
-              </div>
-
-              <div class="button-view-all">
-                  <button>
-                  View all Products
-              <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-        </button>
               </div>
           </div>
       </div>
-  </section>
+      </section>
+
+      <!-- who we are -->
+      <section class="who-we">
+        <div class="container">
+            <div class="who-we-are">
+                <div class="who-we-are_content">
+                    <h1>Who we are?</h1>
+                    <p class="who-we-are_content_organic">We are organic, commited to responsibly sourcing wholesome ingredients.</p>
+                    <span><p>We know that living well begins with eating well so you will find no nasties added here - just pure, simple, honest to goodness products</p></span>
+                      <div class="who-we-are_content_items">
+                        <div class="who-we-are_content_items_star">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <div class="who-we-are_content_items_text">
+                                <p><b>High Quality</b></p>
+                            </div>
+                        </div>
+                        <div class="who-we-are_content_items_leaf">
+                          <i class="fa fa-envira" aria-hidden="true"></i>
+                          <div class="who-we-are_content_items_text">
+                              <p><b>Everyday Fresh</b></p>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="we-content_button">
+                        <button class="we-content_button_learn">
+              <a href="">Learn more about us
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+            </button>
+                    </div>
+                </div>
+                <div class="who-we-are_extra">
+                  <img class="who-we-are_extra_drink" src="/assets/images/extra/Frame.png" alt="">
+                  <img class="who-we-are_extra_vector" src="/assets/images/extra/Vector.png" alt="">
+                </div>
+                <div class="who-we-are_content_image">
+                    <img src="/assets/images/who-we-are.png" alt="Our Picture"/>
+                </div>
+                <div class="who-we-are_extra_veg">
+                  <img class="who-we-are_extra_veg_vega" src="/assets/images/extra/Frame veg.png" alt="">
+                  <img class="who-we-are_extra_vectora" src="/assets/images/extra/Vector-a.png" alt="">
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- testimonals -->
+      <section class="testimonals">
+        <div class="container">
+            <div class="testimonals-title">
+                <h1>Client Testimonals</h1>
+            </div>
+
+            <div class="testimonals-data">
+                <div class="testimonals-data_left-navigation">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </div>
+                <div class="testimonals-data_content">
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <div class="testimonals-data_content_text">
+                        <p>Organic Store did exactly what you said it does. Organic Store impressed me on multiple levels. I don't always clop, but when I do, it's because of Organic Store. I wish I would have thought of it first.</p>
+                    </div>
+                    <div class="testimonals-data_content_author">
+                        <p><b>Samantha Trucker</b></p>
+                    </div>
+                    <div class="testimonals-data_content_designation">
+                        <p>Housewife</p>
+                    </div>
+                    <div class="testimonals-data_content_pp">
+                        <img src="/assets/images/profile/person-a.png" />
+                    </div>
+                </div>
+                <div class="testimonals-data_right-navigation">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="testimonals-data_dots three-dots">
+                <span class="three-dots_dot"></span>
+                <span class="three-dots_dot_active"></span>
+                <span class="three-dots_dot"></span>
+            </div>
+
+            <div class="testimonals-button">
+                <button>
+          <a href="">
+            Read all testimonals
+          <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+          </a>
+        </button>
+            </div>
+        </div>
+      </section>
+
+      <!-- our blog -->
+      <section class="blog">
+        <div class="container">
+            <div class="blog_heading">
+                <h1>Our Blogs</h1>
+                <p>Check out what's new with us!</p>
+            </div>
+
+            <div class="blog_content">
+                <div class="blog_content_data">
+                    <div class="blog_content_data_all">
+                        <img src="/assets/blog/image-a.png" />
+                        <div class="blog_content_data_all_p">
+                            <p><b>New year treat: Spinach Salad <br> with white Balsamic</b></p>
+                        </div>
+                        <div class="blog_content_data_all_button">
+                            <b>Read More</b>
+                            <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog_content_datatwo">
+                    <div class="blog_content_datatwo_partone">
+                        <img src="/assets/blog/image-b.png" />
+                        <div class="part_content">
+                            <div class="receipe_time">
+                                <p id="recepie">Receipe</p>
+                                <ul>
+                                    <li>December 28, 2021</li>
+                                </ul>
+                            </div>
+                            <p id="content_title">30 Crowd Pleasing Party Food Ideas on this new year.</p>
+                            <p>Read More
+                                <i id="blog-right-arrow" class="fa fa-arrow-circle-right" aria-hidden="true"></i></p>
+
+                        </div>
+                    </div>
+                    <div class="blog_content_datatwo_parttwo">
+                        <img src="/assets/blog/image-c.png" />
+                        <div class="part_content">
+                            <div class="receipe_time">
+                                <p id="recepie">Receipe</p>
+                                <ul>
+                                    <li>December 28, 2021</li>
+                                </ul>
+                            </div>
+                            <p id="content_title">30 Crowd Pleasing Party Food Ideas on this new year.</p>
+                            <p id="read-more">Read More
+                                <i id="blog-right-arrow" class="fa fa-arrow-circle-right" aria-hidden="true"></i></p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="blog_button">
+                <button>
+                  <a href="">Read all blog
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                </button>
+            </div>
+      </section>
 
     </main>
+
+    <!-- footer section -->
+    <footer class="footers">
+        <div class="container">
+            <div class="footer-items">
+                <div class="footer-items_content">
+                    <img src="/assets/images/logo/logo.png"/>
+                    <p>We are committed to responsibly sourcing wholesome ingredients that both nourish both people and our planet.</p>
+                    <p><b>Get Social</b></p>
+                      <ul>
+                          <li>
+                              <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                          </li>
+                          <li>
+                              <i class="fa fa-instagram" aria-hidden="true"></i>
+                          </li>
+                          <li>
+                              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                          </li>
+                          <li>
+                              <i class="fa fa-twitter" aria-hidden="true"></i>
+                          </li>
+                      </ul>
+
+                </div>
+                <div class="footer-items_list">
+                    <div class="footer-items_list_heading">
+                        <p><b>Shop</b></p>
+                    </div>
+                    <ul>
+                        <li>Specials</li>
+                        <li>Wishlist</li>
+                        <li>On Sales</li>
+                        <li>Our Stores</li>
+                        <li>Trending</li>
+                    </ul>
+                </div>
+                <div class="footer-items_list">
+                    <div class="footer-items_list_heading">
+                        <p><b>Company</b></p>
+                    </div>
+                    <ul>
+                        <li>About</li>
+                        <li>Services</li>
+                        <li>Testimonals</li>
+                        <li>Blog</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="footer-items_list">
+                    <div class="footer-items_list_heading">
+                        <p><b>Contact</b></p>
+                    </div>
+                    <ul>
+                        <li><b>Address</b> <br> 6395 Inlet DrMayville, New York(NY)</li>
+                        <li><b>Contact No.</b> <br> (716) 753-2183 <br> (830) 281-4361</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-copywright">
+                <div class="footer-copywright_content">
+                    <p>Copyright © 2022 Organic - Powered by Rishi Theme</p>
+                </div>
+                <div class="footer-copywright_others">
+                    <p>Privacy Policy | Terms and Conditions</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+     <!-- Swiper JS -->
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+     <!-- Initialize Swiper -->
+     <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          200: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          568: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          960: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        }
+      });
+    </script>
   </body>
 </html>

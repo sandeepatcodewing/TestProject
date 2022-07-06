@@ -3,10 +3,46 @@
     padding: 0px;
 }
 
-.container {
-    font-size: 18px;
+img{
+    width: 50px;
 }
 
-.container>p {
-    font-size: 1em;
+ul{
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.container{
+    background-color: cyan;
+    display: flex;
+    justify-content: space-between;
+}
+
+#checkbox, .menu-icon{
+    display: none;
+}
+ 
+@media (max-width: 600px){
+    .container{
+        flex-direction: column;
+    }
+
+    nav a{
+        display: block;
+        text-align: center;
+    }
+
+    .menu-icon{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    nav{
+        display: none;
+    }
+    #checkbox:checked ~ nav{
+        display: block;
+    }
 }
