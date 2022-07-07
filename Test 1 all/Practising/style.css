@@ -7,14 +7,9 @@ img{
     width: 50px;
 }
 
-ul{
-    display: flex;
-    list-style-type: none;
-    gap: 20px;
-}
 
 .container{
-    background-color: cyan;
+    background-color: rgb(81, 220, 255);
     display: flex;
     justify-content: space-between;
 }

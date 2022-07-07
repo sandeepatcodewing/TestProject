@@ -1,0 +1,133 @@
+$screens: (
+    sm: 350px,
+    md: 768px,
+    lg: 960px,
+    xl: 1200px
+);
+
+@function screens($screen-point){
+    @return map-get($screens, $screen-point);
+}
+
+@mixin media-sm {
+    @media (min-width: screens(sm)){
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media (min-width: screens(md)){
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media (min-width: screens(lg)){
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media (min-width: screens(xl)){
+        @content;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+a,a:visited,a:active{
+    text-decoration: none;
+}
+
+.navbar{
+    background-color: rgb(57, 232, 255);
+}
+
+.container{
+    padding: 18px 18px;
+    @include media-sm{
+        margin: 0 auto;
+        max-width: 568px;
+    }
+    @include media-lg{
+        margin: 0 auto;
+        max-width: 762px;
+    }
+    @include media-lg{
+        margin: 0 auto;
+        max-width: 992px;
+    }
+    @include media-xl{
+        margin: 0 auto;
+        max-width: 1140px;
+    }
+}
+
+.navbar-items{
+    @include media-sm{
+        display: grid;
+    }
+    @include media-md{
+        display: flex;
+        justify-content: space-between;
+    }
+    @include media-lg{
+        display: flex;
+        justify-content: space-between;
+    }
+    @include media-xl{
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+    }
+}
+
+.label-menu{
+        display: block;
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        @include media-md{
+            display: none;
+        }
+        @include media-lg{
+            display: none;
+        }
+        @include media-xl{
+            display: none;
+        }
+}
+
+#menu-items{
+    display: none;
+    @include media-sm{
+        &:checked ~ nav{
+            padding: 15px 0px 0px 0px;
+            display: grid;
+            text-align: center;
+            row-gap: 20px;
+        }
+    }
+}
+
+nav{
+    margin: auto 0;
+    @include media-sm{
+        display: none;
+    }
+    @include media-md{
+        display: flex;
+        gap: 20px;
+    }
+    @include media-lg{
+        display: flex;
+        gap: 20px;
+    }
+}
