@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} { 
+        width: 100%; 
+    }
+}
+
+body{
+    background-color: red;
+}
+
+
+$screens: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+);
+
+@mixin mediaMin($screen) {
+    @media (min-width: map-get($screens, $screen)){
+        @content;
+    }
+}
+
+
+
+.container{
+    width: 100%;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 0px 5px;
+}
+
+.col-items{
+    position: relative;
+    color: #fff;
+    h3{
+        position: absolute;
+        top: 80%;
+        left: 10%;
+    }
+}
+
+@media (min-width: 576px){
+    .container{
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+    @for $i from 1 through 12 {
+        .col-#{$i} { 
+            width: 100%/12 * $i; 
+            text-align: center;
+        }
+    }
+}
+
+
+@media (min-width: 992px){
+    .container{
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
+
+
+@media (min-width: 1200px){
+    .container{
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+}
+
