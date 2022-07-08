@@ -115,8 +115,13 @@ $screens: (
     box-sizing: border-box;
 }
 
+img{
+    max-width: 100%;
+}
+
 body{
     font-family: 'Inter',sans-serif;
+    background: var(--background-section-color);
 }
 
 
@@ -166,7 +171,7 @@ h4{
 .container{
     margin: 0 auto;
     max-width: 1140px;
-    padding: 0px 10px;
+    padding: 0px 16px;
 }
 
 // header-section styling
@@ -218,10 +223,13 @@ h4{
     }
 }
 
-.logo-navbar_items{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0px;
+.logo-navbar{
+    background: #FFF;
+    &_items{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0px;
+    }
 }
 
 .label-menu{
@@ -365,6 +373,9 @@ nav{
 }
 
 // banner-section styling
+.banner{
+    background-color: #fff;
+}
 
 .banner-items{
     display: grid;
@@ -420,9 +431,6 @@ nav{
 .banner-items_images{
     text-align: end;
     position: relative;
-    img{
-        width: 100%;
-    }
     @include media-sm{
         text-align: center;
     }
@@ -502,6 +510,9 @@ nav{
 
 
 // short-features-section styling
+.features{
+    background-color: #fff;
+}
 
 .features-items{
     display: grid;
@@ -559,7 +570,7 @@ hr{
 // welcome-section styling
 
 .welcome{
-    padding: 96px 0px;
+    padding: 0px 0px 96px 0px;
     background-color: var(--background-section-color);
 }
 
@@ -568,9 +579,6 @@ hr{
     column-gap: 60px;
     &_image{
         text-align: center;
-        img{
-            width: 100%;
-        }
     }
     @include media-sm{
         grid-template-columns: repeat(1,1fr);
@@ -615,9 +623,11 @@ hr{
 // our-services styling
 .services{
     padding: 96px 0px;
+    background-color: #fff;
 }
 
 .services_items{
+    position: relative;
     text-align: center;
     button{
         @include button;
@@ -691,4 +701,234 @@ hr{
 
 .fa-long-arrow-right{
     padding-left: 16px;
+}
+
+
+//process-section styling
+
+.process{
+    padding: 96px 0px;
+}
+
+.process-items_header{
+    display: grid;
+    column-gap: 30px;
+    row-gap: 30px;
+    &_title{
+        @include link-category;
+        h2{
+            padding: 15px 0px 32px 0px;
+        }
+    }
+    &_paragraph{
+        @include paragraph;
+        margin: auto 0;
+        text-align: center;
+    }
+
+    @include media-sm{
+        grid-template-columns: repeat(1,1fr);
+        &_title{
+            text-align: center;
+        }
+    }
+    @include media-md{
+        grid-template-columns: repeat(1,1fr);
+        &_title{
+            text-align: center;
+        }
+    }
+    @include media-lg{
+        grid-template-columns: repeat(2,1fr);
+        &_title{
+            text-align: start;
+        }
+    }
+}
+
+.process-items_list{
+    display: grid;
+    column-gap: 30px;
+    row-gap: 30px;
+    padding: 64px 0px 51px 0px;
+    @include media-sm{
+        grid-template-columns: repeat(1,1fr);
+    }
+    @include media-md{
+        grid-template-columns: repeat(2,1fr);
+    }
+    @include media-lg{
+        grid-template-columns: repeat(3,1fr);
+    }
+    @include media-xl{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+
+.process-items_list_card{
+    text-align: center;
+    padding: 56px 47px;
+    background-color: #fff;
+    border-radius: 10px;
+    color: var(--header-color);
+    box-shadow: 0px 12px 48px 0px #15243B14;
+    &_image{
+        margin: 0 auto;
+        max-width: 130px;
+        padding: 30px 0px;
+        border-radius: 50%;
+        background:linear-gradient(180deg, rgba(254,235,238,1) 0%, rgba(255,182,200,1) 100%);
+    }
+    &_text{
+        font-size: 1.56rem;
+        padding-top: 40px;
+        font-weight: 600;
+    }
+    &:hover{
+        background: var(--primary-color);
+        color: #fff;
+    }
+}
+
+.color-calendar{
+    background: linear-gradient(180deg, #ECF9FF 0%, #B4E6FF 100%);
+}
+
+.color-caller{
+    background: linear-gradient(180deg, #F6FFF1 0%, #D2FFA7 100%);
+}
+
+.color-medicine{
+    background: linear-gradient(180deg, #FFFAEF 0%, #FFB763 100%);
+}
+
+.card-dot{
+    position: relative;
+}
+
+.dots-image{
+    @include media-sm{
+        display: none;
+    }
+    @include media-md{
+        display: none;
+    }
+    @include media-lg{
+        display: none;
+    }
+    @include media-xl{
+        display: block;
+        position: absolute;
+        z-index: -1;
+        right: -88px;
+    }
+}
+
+// appointment section styling
+ .appointment{
+    padding: 96px 0px;
+    background-color: #fff;
+ }
+
+ .appointment-items{
+    display: grid;
+    @include media-sm{
+        grid-template-columns: repeat(1,1fr);
+    }
+    @include media-lg{
+        grid-template-columns: repeat(2,1fr);
+    }
+    @include media-xl{
+        grid-template-columns: repeat(2,1fr);
+    }
+ }
+
+ .appointment-items_texts{
+    display: grid;
+    row-gap: 15px;
+    @include link-category;
+ }
+
+ .appointment-items_form{
+    padding: 40px 32px;
+    border-radius: 20px;
+    box-shadow: 0px 12px 48px 0px #15243B14;
+    display: grid;
+    button{
+        @include button;
+        a{
+            color: #fff;
+            @include media-sm{
+                font-size: 1rem;
+            }
+        }
+    }
+ }
+
+ 
+
+input[type=text],select{
+    border: 1px solid rgba(233, 233, 233, 0.603);
+    padding: 16px 14px;
+    border-radius: 10px;
+    width: 100%;
+    margin: 8px 0px 32px 0px;
+    &::placeholder{
+        font-family: inherit;
+        color: rgb(184, 184, 184);
+    }
+    &:focus{
+        border: 1px solid var(--button-color);
+    }
+    &::selection{
+        border: 1px solid var(--button-color);
+    }
+}
+
+// mobile-app section
+
+.mobile{
+    padding: 96px 0px;
+}
+
+.mobile-items{
+    display: grid;
+    column-gap: 78px;
+    row-gap: 20px;
+    @include media-sm{
+        grid-template-columns: repeat(1,1fr);
+    }
+    @include media-md{
+        grid-template-columns: repeat(1,1fr);
+    }
+    @include media-lg{
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+}
+
+
+.mobile-items_texts{
+    @include link-category;
+    @include paragraph;
+    display: grid;
+    row-gap: 16px;
+}
+
+.services_items_lists{
+    display: grid;
+    column-gap: 30px;
+    row-gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+    padding: 64px 0px;
+}
+
+.services_items_list_cards{
+    h4{
+        color: #fff;
+    }
+    p{
+        color: #fff;
+    }
 }
