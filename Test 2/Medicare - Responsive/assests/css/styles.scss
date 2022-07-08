@@ -54,7 +54,7 @@ $screens: (
     }
 }
 
-@mixin services-list{
+@mixin features-list{
     background: var(--primary-color);
     padding: 40px;
     display: grid;
@@ -106,6 +106,7 @@ $screens: (
     --category-bg-color: #BDF2E3;
     --category-color: #047D37;
     --paragraph-size: 1.125rem;
+    --background-section-color: #F7FBFF;
 }
 
 *{
@@ -145,6 +146,13 @@ h2{
 }
 
 h3{
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #12171F;
+}
+
+h4{
     font-size: 1.25rem;
     font-weight: 700;
 }
@@ -161,6 +169,8 @@ h3{
     padding: 0px 10px;
 }
 
+// header-section styling
+
 .contact-media{
     @include media-sm{
         display: none;
@@ -170,13 +180,13 @@ h3{
     }
     @include media-lg{
         display: inline;
-        background-color: #F7FBFF;
+        background-color: var(--background-section-color);
         padding: 16px 0px;
         color: var(--paragraph-color);
     }
     @include media-xl{
         display: inline;
-        background-color: #F7FBFF;
+        background-color: var(--background-section-color);
         padding: 16px 0px;
         color: var(--paragraph-color);
     }
@@ -356,8 +366,6 @@ nav{
 
 // banner-section styling
 
-
-
 .banner-items{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -493,12 +501,9 @@ nav{
 }
 
 
-// services-section styling
-.services{
-    padding: 0px 0px 33px 0px;
-}
+// short-features-section styling
 
-.services-items{
+.features-items{
     display: grid;
     padding: 21.5px 0px;
     @include media-sm{
@@ -512,21 +517,21 @@ nav{
     }
 }
 
-.services-items_emergency{
+.features-items_emergency{
     border-radius: 10px 0px 0px 10px;
-    @include services-list;
+    @include features-list;
     @include media-sm{
         border-radius: 10px 10px 0px 0px;
     }
 }
 
-.services-items_timetable{
-    @include services-list;
+.features-items_timetable{
+    @include features-list;
 }
 
-.services-items_hours{ 
+.features-items_hours{ 
     border-radius: 0px 10px 10px 0px;
-    @include services-list;
+    @include features-list;
     @include media-sm{
         border-radius: 0px 0px 10px 10px;
     }
@@ -537,7 +542,7 @@ hr{
     background: #FFFFFF1A;
 }
 
-.services-items_hours_list{
+.features-items_hours_list{
     p{
         display: flex;
         column-gap: 107px;
@@ -551,8 +556,11 @@ hr{
     box-shadow: 0px 1px 0px #FFFFFF1A inset;
 }
 
+// welcome-section styling
+
 .welcome{
-    padding: 33px 0px;
+    padding: 96px 0px;
+    background-color: var(--background-section-color);
 }
 
 .welcome-items{
@@ -592,9 +600,6 @@ hr{
     button{
         margin-top: 32px;
         @include button;
-        span{
-            padding-left: 16px;
-        }
     }
 }
 
@@ -605,4 +610,85 @@ hr{
     p{
         font-size: 1.125rem;
     }  
+}
+
+// our-services styling
+.services{
+    padding: 96px 0px;
+}
+
+.services_items{
+    text-align: center;
+    button{
+        @include button;
+        a{
+            color: #fff;
+        }
+    }
+}
+
+.services_items_texts{
+    @include link-category;
+    display: grid;
+    row-gap: 16px;
+    p{
+        margin: auto;
+        max-width: 651px;
+        @include paragraph;
+    }
+}
+
+.services_items_list{
+    display: grid;
+    padding: 52px 0px;
+    @include media-sm{
+        grid-template-columns: repeat(1,1fr);
+        column-gap: 30px;
+        row-gap: 48px;
+    }
+    @include media-md(){
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 30px;
+        row-gap: 48px;
+    }
+    @include media-lg(){
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 30px;
+        row-gap: 48px;
+    }
+}
+
+.services_items_list_card{
+    font-family: 'Nunito Sans', sans-serif;
+    border-radius: 0px 0px 20px 20px;
+    background-color: var(--background-section-color);
+    &_image{
+        padding: 44px 0px;
+        border-radius: 20px 20px 0px 0px;
+        background: var(--primary-color);
+    }
+}
+
+.services_items_list_card_texts{
+    padding: 24px 30px;
+    display: grid;
+    justify-items: center;
+    gap: 11px;
+    p{
+        line-height: 28px;
+        color: var(--paragraph-color);
+        font-weight: 400;
+    }
+    button{
+        border: none;
+        padding-top: 13px;
+        background-color: transparent;
+        a{
+            color: var(--button-color);
+        }
+    }
+}
+
+.fa-long-arrow-right{
+    padding-left: 16px;
 }
