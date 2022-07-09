@@ -1,0 +1,167 @@
+@import 'boilerplate';
+@import 'media';
+@import 'reset';
+
+%container{
+    margin: 0 auto;
+    padding: 0px 16px;
+}
+
+%grid-start
+{
+    display: grid;
+    row-gap: 16px;
+    justify-items: start;
+}
+
+@mixin flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin grid-auto{
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+
+// responsove container
+.container{
+    @extend %container;
+    @include media-sm{
+        max-width: 540px;
+    }
+    @include media-md{
+        max-width: 720px;
+    }
+    @include media-lg{
+        max-width: 960px;
+    }
+    @include media-xl{
+        max-width: 1170px;
+    }
+}
+
+// header styling
+.header-top{
+    display: block;
+    color: var(--paragraph-color);
+    padding: 10px 0px;
+    background: var(--background-section-color);
+    &__section{
+        @include flex-between;
+    }
+    &__detail{
+        &--gap{
+            @include grid-auto;
+            column-gap: 20.67px;
+        }
+    }
+    &__icon{
+        @include grid-auto;
+        column-gap: 10.74px;
+        &:hover{
+            color: var(--button-color);
+        }
+    }
+    &__socialmedia{
+        margin: auto 0;
+        @include flex-between;
+    }
+    @include media-sm{
+        display: none;
+    }
+}
+
+// logo + navbar styling
+.logo-nav{
+    color: var(--paragraph-color);
+    padding: 20px 0px;
+    &__section{
+        @include flex-between;
+    }
+    &__hamburger{
+        color: #000;
+        font-size: 1.875rem;
+        @include media-sm{
+            display: inline;
+            margin: auto 0;
+        }
+        @include media-md{
+            display: inline;
+            margin: auto 0;
+        }
+        @include media-xl{
+            display: none;
+        }
+    }
+    &__menu{
+        @include media-sm{
+            display: none;
+        }
+        @include media-md{
+            display: none;
+        }
+        @include media-xl{
+            @include flex-between;
+            gap: 40px;
+            font-weight: 400;
+            font-size: 1.125rem;
+        }
+    }
+    &__navbar{
+        margin: auto 0;
+    }
+    &__list{
+        display: flex;
+        gap: 20px;
+        li{
+            &:hover{
+                color: var(--button-color);
+            }
+        }
+    }
+    &__button{
+        font-weight: 400;
+        &:hover{
+            .right-arrow{
+                fill: var(--dark-green);
+            }
+            color: var(--dark-green);
+            background: var(--light-green);
+        }
+    }
+    &__arrow{
+        fill: #fff;
+    }
+}
+
+// section style
+
+
+// banner
+.banner{
+    &__content{
+        display: grid;
+        padding: 19px 0px;
+    }
+    &__text{
+        margin: auto 0;
+        @extend %grid-start;
+    }
+    @include media-lg{
+        &__content{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    @include media-lg{
+        &__content{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @include media-xl{
+        &__content{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
