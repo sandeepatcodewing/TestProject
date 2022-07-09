@@ -61,13 +61,24 @@ img{
     color: #fff;
     background: var(--button-color);
     font-size: 1.125rem;
+    box-shadow: 0px 15px 30px rgba(236, 142, 0, 0.15);
     a{
         display: flex;
         justify-content: end;
         align-items: center;
         gap: 16px;
     }
+    &:hover{
+        .right-arrow{
+            fill: var(--dark-green);
+        }
+        color: var(--dark-green);
+        background: var(--light-green);
+    }
 }
+
+
+.butt
 
 .active{
     color: var(--header-color);

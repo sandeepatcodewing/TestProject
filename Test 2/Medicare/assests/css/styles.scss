@@ -123,35 +123,33 @@
     }
     &__button{
         font-weight: 400;
-        &:hover{
-            .right-arrow{
-                fill: var(--dark-green);
-            }
-            color: var(--dark-green);
-            background: var(--light-green);
-        }
     }
     &__arrow{
         fill: #fff;
     }
 }
 
-// section style
-
-
 // banner
 .banner{
     &__content{
+        position: relative;
         display: grid;
         padding: 19px 0px;
+        row-gap: 30px;
     }
     &__text{
         margin: auto 0;
         @extend %grid-start;
     }
-    @include media-lg{
+    &__button{
+        margin-top: 22px;
+    }
+    @include media-sm{
         &__content{
             grid-template-columns: repeat(1, 1fr);
+        }
+        &__image{
+            margin: 0 auto;
         }
     }
     @include media-lg{
@@ -162,6 +160,20 @@
     @include media-xl{
         &__content{
             grid-template-columns: repeat(2, 1fr);
+        }
+        &__left-cricle{
+            position: absolute;
+            height: 90px;
+            width: 90px;
+            background: linear-gradient(149.21deg, #FFFFFF 12.75%, #D0DCFF 86.99%);
+            border-radius: 50%;
+            bottom: 0px;
+            left: -100px;
+        }
+        &__image{
+            img{
+                margin-left: 130px;
+            }   
         }
     }
 }
