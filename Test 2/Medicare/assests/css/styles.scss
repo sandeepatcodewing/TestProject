@@ -10,8 +10,9 @@
 %grid-start
 {
     display: grid;
-    row-gap: 16px;
     justify-items: start;
+    row-gap: 12px;
+    color: #fff;
 }
 
 @mixin flex-between{
@@ -144,6 +145,9 @@
     &__button{
         margin-top: 22px;
     }
+    &__image{
+        position: relative;
+    }
     @include media-sm{
         &__content{
             grid-template-columns: repeat(1, 1fr);
@@ -155,6 +159,26 @@
     @include media-lg{
         &__content{
             grid-template-columns: repeat(2, 1fr);
+        }
+        &__left-circle{
+            &--a{
+                position: absolute;
+                height: 65px;
+                width: 65px;
+                background: linear-gradient(149.21deg, #FFFFFF 12.75%, #D0DCFF 86.99%);
+                border-radius: 50%;
+                top: 0px;
+                left: 140px;
+            }
+            &--b{
+                position: absolute;
+                height: 65px;
+                width: 65px;
+                background: linear-gradient(149.21deg, #FFFFFF 12.75%, #D0DCFF 86.99%);
+                border-radius: 50%;
+                bottom: 47px;
+                right: -110px;
+            }
         }
     }
     @include media-xl{
@@ -169,11 +193,172 @@
             border-radius: 50%;
             bottom: 0px;
             left: -100px;
+            &--a{
+                position: absolute;
+                height: 65px;
+                width: 65px;
+                background: linear-gradient(149.21deg, #FFFFFF 12.75%, #D0DCFF 86.99%);
+                border-radius: 50%;
+                top: 0px;
+                left: 140px;
+            }
+            &--b{
+                position: absolute;
+                height: 65px;
+                width: 65px;
+                background: linear-gradient(149.21deg, #FFFFFF 12.75%, #D0DCFF 86.99%);
+                border-radius: 50%;
+                bottom: 47px;
+                right: -110px;
+            }
         }
         &__image{
             img{
                 margin-left: 130px;
             }   
+        }
+    }
+}
+
+//features
+.features{
+    &__content{
+        display: grid;
+    }
+    .shadow-right{
+        box-shadow: inset -1px 0px 0px rgba(255, 255, 255, 0.1);
+    }
+    &__emergency{
+        @extend %grid-start;
+        background: var(--primary-color);
+        box-shadow: inset -1px 0px 0px rgba(255, 255, 255, 0.1);
+        padding: 40px;
+        color: #fff;
+        border-radius: 10px 0px 0px 10px;
+    }
+    &__timetable{
+        @extend %grid-start;
+        background: var(--primary-color);
+        box-shadow: inset -1px 0px 0px rgba(255, 255, 255, 0.1);
+        padding: 40px;
+    }
+    &__hours{
+        @extend %grid-start;
+        background: var(--primary-color);
+        padding: 40px;
+        border-radius: 0px 10px 10px 0px;
+    }
+    &__paragraph{
+        font-size: 1.125rem;
+        line-height: 34px;
+    }
+    &__icon{
+        padding-bottom: 8px;
+    }
+    &__row{
+        padding: 12px 0px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: space-between;
+    }
+    &__border{
+        box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.1);
+    }
+    @include media-sm{
+        &__emergency{
+            border-radius: 10px 10px 0px 0px;
+        }
+        &__hours{
+            border-radius: 0px 0px 10px 10px;
+        }
+    }
+    @include media-md{
+        &__emergency{
+            border-radius: 10px 10px 0px 0px;
+        }
+        &__hours{
+            border-radius: 0px 0px 10px 10px;
+        }
+    }
+    @include media-lg{
+        &__content{
+            grid-template-columns: repeat(2,1fr);
+        }
+        &__emergency{
+            border-radius: 10px 0px 0px 10px;
+        }
+        &__hours{
+            border-radius: 10px 0px 10px 10px;
+        }
+    }
+    @include media-xl{
+        &__content{
+            grid-template-columns: repeat(3,1fr);
+        }
+        &__emergency{
+            border-radius: 10px 0px 0px 10px;
+        }
+        &__hours{
+            border-radius: 0px 10px 10px 0px;
+        }
+    }
+}
+
+//about us styling
+.about{
+    &__content{
+        display: grid;
+        column-gap: 30px;
+        row-gap: 20px;
+    }
+    &__texts{
+        display: grid;
+        justify-items: start;
+        row-gap: 16px;
+    }
+    &__emergency{
+        display: grid;
+        grid-template-columns: repeat(2 ,1fr);
+        column-gap: 63px;
+        row-gap: 16px;
+    }
+    &__check{
+        display: flex;
+        gap: 10px;
+    }
+    &__button{
+        margin-top: 22px;
+    }
+    @include media-sm{
+        &__content{
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &__image{
+            text-align: center;
+        }
+    }
+    @include media-md{
+        &__content{
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &__image{
+            text-align: center;
+        }
+    }
+    @include media-lg{
+        &__content{
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &__image{
+            text-align: center;
+        }
+    }
+    @include media-xl{
+        &__content{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__image{
+            text-align: start;
         }
     }
 }
