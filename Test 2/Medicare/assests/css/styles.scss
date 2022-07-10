@@ -233,7 +233,6 @@
         background: var(--primary-color);
         box-shadow: inset -1px 0px 0px rgba(255, 255, 255, 0.1);
         padding: 40px;
-        color: #fff;
         border-radius: 10px 0px 0px 10px;
     }
     &__timetable{
@@ -359,6 +358,156 @@
         }
         &__image{
             text-align: start;
+        }
+    }
+}
+
+//services styling
+.services{
+    &__cards{
+        display: grid;
+        row-gap: 40px;
+        column-gap: 30px;
+        padding: 40px 0px;
+    }
+    &__texts{
+        display: grid;
+        row-gap: 16px;
+        justify-items: center;
+        max-width: 651px;
+        margin: 0 auto;
+    }
+    &__icon{
+        padding: 46px 0px;
+        background: var(--primary-color);
+        border-radius: 20px 20px 0px 0px;
+    }
+    &__details{
+        display: grid;
+        justify-items: center;
+        row-gap: 11px;
+        padding: 24px 30px;
+        border-radius: 0px 0px 20px 20px;
+        background: #F7FBFF;
+    }
+    &__button{
+        &--card{
+            background: transparent;
+            color: var(--button-color);
+            padding: 14px 24px;
+            border-radius: 10px;
+            margin-top: 13px;
+            a{
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                gap: 16px;
+                font-weight: 600;
+            }
+            .right-arrow{
+                fill: var(--button-color);
+            }
+            &:hover{
+                .right-arrow{
+                    fill: var(--dark-green);
+                }
+                color: var(--dark-green);
+                background: var(--light-green);
+            }
+        }
+    }
+    @include media-sm{
+        &__cards{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    @include media-md{
+        &__cards{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @include media-lg{
+        &__cards{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+}
+
+//process styling
+.process{
+    &__texts{
+        display: grid;
+        row-gap: 20px;
+        column-gap: 150px;
+    }
+    &__title{
+        &--spacing{
+            display: grid;
+            justify-items: start;
+            row-gap: 15px;
+        }
+    }
+    &__paragraph{
+        margin: auto 0;
+    }
+    &__cardlist{
+        display: grid;
+        column-gap: 30px;
+        row-gap: 30px;
+        padding-top: 64px;
+    }
+    &__card{
+        text-align: center;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 56px 47px;
+        display: grid;
+        row-gap: 40px;
+        box-shadow: 0px 12px 48px rgba(21, 36, 59, 0.08);
+        &:hover{
+            background: var(--primary-color);
+            color: #fff;
+        }
+    }
+    &__dots{
+        &--image{
+            position: absolute;
+            bottom: -57px;
+            right: -90px;
+            z-index: -1;
+        }
+    }
+    @include media-sm{
+        &__texts{
+            grid-template-columns: repeat(1,1fr);
+        }
+        &__cardlist{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    @include media-md{
+        &__texts{
+            grid-template-columns: repeat(1,1fr);
+        }
+        &__cardlist{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @include media-lg{
+        &__texts{
+            grid-template-columns: repeat(2,1fr);
+        }
+        &__cardlist{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    @include media-xl{
+        &__texts{
+            grid-template-columns: repeat(2,1fr);
+        }
+        &__cardlist{
+            position: relative;
+            grid-template-columns: repeat(4,1fr);
         }
     }
 }
