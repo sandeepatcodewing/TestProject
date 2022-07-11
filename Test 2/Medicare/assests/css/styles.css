@@ -190,6 +190,8 @@ button {
     margin: auto 0;
     display: flex;
     justify-content: space-between; }
+    .header-top__socialmedia a {
+      color: var(--paragraph-color); }
   @media (max-width: 767px) {
     .header-top {
       display: none; } }

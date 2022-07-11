@@ -68,6 +68,9 @@
     &__socialmedia{
         margin: auto 0;
         @include flex-between;
+        a{
+            color: var(--paragraph-color);
+        }
     }
     @include media-sm{
         display: none;
