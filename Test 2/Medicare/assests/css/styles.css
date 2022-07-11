@@ -58,12 +58,11 @@ img {
 .btn-primary, .btn-secondary {
   padding: 16px 24px;
   border-radius: 10px;
-  color: #fff; }
-  .btn-primary a, .btn-secondary a {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 16px; }
+  color: #fff;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 16px; }
   .btn-primary:hover, .btn-secondary:hover {
     color: var(--dark-green);
     background: var(--light-green); }
@@ -130,7 +129,6 @@ img {
   box-sizing: border-box; }
 
 a, a:visited, a:active {
-  color: inherit;
   text-decoration: none; }
 
 button {
@@ -229,6 +227,7 @@ button {
     .logo-nav__list li:hover {
       color: var(--button-color); }
   .logo-nav__button {
+    color: #fff;
     font-weight: 400; }
   .logo-nav__arrow {
     fill: #fff; }
@@ -552,6 +551,22 @@ button {
 .appointment__texts h2 {
   padding: 16px 0px; }
 
+.appointment__image--space {
+  padding-top: 30px; }
+
+.appointment__social {
+  padding-top: 48px;
+  display: grid;
+  row-gap: 25px; }
+  .appointment__social--icons {
+    display: flex;
+    gap: 24px; }
+
+.appointment__icon {
+  color: var(--paragraph-color); }
+  .appointment__icon:hover {
+    color: var(--button-color); }
+
 .appointment__form {
   display: grid;
   row-gap: 24px;
@@ -561,7 +576,7 @@ button {
   .appointment__form p {
     display: grid; }
 
-.appointment input, .appointment select {
+.appointment input, .appointment select, .appointment textarea {
   max-width: 100%;
   padding: 14px 5px;
   border-radius: 10px;
@@ -579,9 +594,11 @@ button {
   row-gap: 10px; }
 
 .appointment__button {
-  margin-top: 8px; }
-  .appointment__button a {
-    justify-content: center; }
+  margin-top: 8px;
+  justify-content: center; }
+
+.appointment__select {
+  height: 149px; }
 
 @media (max-width: 767px) {
   .appointment__details {
@@ -641,13 +658,14 @@ button {
 .experts__cardslist {
   padding: 64px 0px 48px 0px;
   display: grid;
-  row-gap: 30px;
+  row-gap: 50px;
   column-gap: 30px; }
 
 .experts__card-text p {
   font-size: 1.25rem;
   line-height: 32px;
-  font-weight: 600; }
+  font-weight: 600;
+  color: var(--header-color); }
 
 .experts__card-text span {
   line-height: 28px;
@@ -659,9 +677,13 @@ button {
 
 @media (min-width: 768px) {
   .experts__cardslist {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media (min-width: 992px) {
+  .experts__cardslist {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media (min-width: 1200px) {
   .experts__cardslist {
     grid-template-columns: repeat(4, 1fr); } }
 
@@ -794,6 +816,8 @@ button {
     gap: 20px; }
     .reach__appointment--image {
       margin: auto 0; }
+    .reach__appointment--texts {
+      color: var(--header-color); }
   @media (max-width: 767px) {
     .reach__content {
       display: grid;
@@ -835,6 +859,8 @@ button {
       color: var(--header-color);
       line-height: 35px;
       padding: 30px 0px 0px 0px; }
+      .footer__text--title:hover {
+        color: var(--button-color); }
     .footer__text--date {
       padding-top: 4px;
       font-size: 0.875rem;
@@ -854,6 +880,10 @@ button {
     justify-content: space-between; }
   .footer__icon {
     color: var(--header-color); }
+    .footer__icon:hover {
+      color: var(--button-color); }
+  .footer li:hover {
+    color: var(--button-color); }
   .footer .border-bottom {
     border-bottom: 1px solid rgba(103, 106, 138, 0.15); }
   @media (max-width: 767px) {
@@ -885,3 +915,87 @@ button {
   @media (max-width: 767px) {
     .copyright {
       display: none; } }
+
+.section__content {
+  position: relative; }
+
+.section__texts {
+  margin: 0 auto;
+  max-width: 743px; }
+  .section__texts h2 {
+    padding: 16px 0px; }
+
+.section__left-circle {
+  position: absolute;
+  height: 65px;
+  width: 65px;
+  background: linear-gradient(149.21deg, #FFFFFF 12.75%, #D0DCFF 86.99%);
+  border-radius: 50%;
+  top: -66px;
+  right: -137px; }
+
+.section__right-circle {
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background: linear-gradient(149.21deg, #FFFFFF 12.75%, #D0DCFF 86.99%);
+  border-radius: 50%;
+  bottom: -55px;
+  left: -300px; }
+
+@media (max-width: 767px) {
+  .section__left-circle {
+    display: none; }
+  .section__right-circle {
+    display: none; } }
+
+@media (min-width: 768px) {
+  .section__left-circle {
+    display: none; }
+  .section__right-circle {
+    display: none; } }
+
+@media (min-width: 1200px) {
+  .section__left-circle {
+    display: inline; }
+  .section__right-circle {
+    display: inline; } }
+
+.all-testimonal__content {
+  display: grid;
+  column-gap: 30px;
+  row-gap: 30px; }
+
+.all-testimonal__card {
+  display: grid;
+  row-gap: 24px;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 20px; }
+  .all-testimonal__card--text {
+    font-size: 1.125rem;
+    line-height: 34px;
+    color: var(--paragraph-color); }
+
+.all-testimonal__author {
+  display: flex;
+  gap: 16px; }
+  .all-testimonal__author--details {
+    margin: auto 0; }
+  .all-testimonal__author--name {
+    color: var(--header-color); }
+  .all-testimonal__author--work {
+    line-height: 34px;
+    color: var(--paragraph-color); }
+
+@media (min-width: 768px) {
+  .all-testimonal__content {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media (min-width: 992px) {
+  .all-testimonal__content {
+    grid-template-columns: repeat(2, 1fr); } }
+
+.map__iframe {
+  width: 100%;
+  height: 50vh; }

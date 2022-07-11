@@ -123,6 +123,7 @@
         }
     }
     &__button{
+        color: #fff;
         font-weight: 400;
     }
     &__arrow{
@@ -540,6 +541,26 @@
             padding: 16px 0px;
         }
     }
+    &__image{
+        &--space{
+            padding-top: 30px;
+        }
+    }
+    &__social{
+        padding-top: 48px;
+        display: grid;
+        row-gap: 25px;
+        &--icons{
+            display: flex;
+            gap: 24px;
+        }
+    }
+    &__icon{
+        color: var(--paragraph-color);
+        &:hover{
+            color: var(--button-color);
+        }
+    }
     &__form{
         display: grid;
         row-gap: 24px;
@@ -550,7 +571,7 @@
             display: grid;
         }
     }
-    input, select{
+    input, select, textarea{
         max-width: 100%;
         padding: 14px 5px;
         border-radius: 10px;
@@ -569,9 +590,10 @@
     }
     &__button{
         margin-top: 8px;
-        a{
-            justify-content: center;
-        }
+        justify-content: center;
+    }
+    &__select{
+        height: 149px;
     }
     @include media-sm{
         &__details{
@@ -649,7 +671,7 @@
     &__cardslist{
         padding: 64px 0px 48px 0px;
         display: grid;
-        row-gap: 30px;
+        row-gap: 50px;
         column-gap: 30px;
     }
     &__card-text{
@@ -657,6 +679,7 @@
             font-size: 1.25rem;
             line-height: 32px;
             font-weight: 600;
+            color: var(--header-color);
         }
         span{
             line-height: 28px;
@@ -670,10 +693,15 @@
     }
     @include media-md{
         &__cardslist{
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(2,1fr);
         }
     }
     @include media-lg{
+        &__cardslist{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    @include media-xl{
         &__cardslist{
             grid-template-columns: repeat(4,1fr);
         }
@@ -845,6 +873,9 @@
         &--image{
             margin: auto 0;
         }
+        &--texts{
+            color: var(--header-color);
+        }
     }    
     @include media-sm{
         &__content{
@@ -897,7 +928,10 @@
         &--title{
             color: var(--header-color);
             line-height: 35px;
-            padding: 30px 0px 0px 0px;
+            padding: 30px 0px 0px 0px;  
+            &:hover{
+                color: var(--button-color);
+            }
         }
         &--date{
             padding-top: 4px;
@@ -924,6 +958,14 @@
     }
     &__icon{
         color: var(--header-color);
+        &:hover{
+            color: var(--button-color);
+        }
+    }
+    li{
+        &:hover{
+            color: var(--button-color);
+        }
     }
     .border-bottom{
         border-bottom: 1px solid rgba(103, 106, 138, 0.15);
@@ -971,4 +1013,117 @@
     @include media-sm{
         display: none;
     }
+}
+
+// About us page
+.section{
+    &__content{
+        position: relative;
+    }
+    &__texts{
+        margin: 0 auto;
+        max-width: 743px;
+        h2{
+            padding: 16px 0px;
+        }
+    }
+    &__left-circle{
+        position: absolute;
+        height: 65px;
+        width: 65px;
+        background: linear-gradient(149.21deg, #FFFFFF 12.75%, #D0DCFF 86.99%);
+        border-radius: 50%;
+        top: -66px;
+        right: -137px;
+    }
+    &__right-circle{
+        position: absolute;
+        height: 90px;
+        width: 90px;
+        background: linear-gradient(149.21deg, #FFFFFF 12.75%, #D0DCFF 86.99%);
+        border-radius: 50%;
+        bottom: -55px;
+        left: -300px;
+    }
+    @include media-sm{
+        &__left-circle{
+            display: none;
+        }
+        &__right-circle{
+            display: none;
+        }
+    }
+    @include media-md{
+        &__left-circle{
+            display: none;
+        }
+        &__right-circle{
+            display: none;
+        }
+    }
+    @include media-xl{
+        &__left-circle{
+            display: inline;
+        }
+        &__right-circle{
+            display: inline;
+        }
+    }
+}
+
+// Testimonal page
+.all-testimonal{
+    &__content{
+        display: grid;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+    &__card{
+        display: grid;
+        row-gap: 24px;
+        padding: 24px;
+        background-color: #fff;
+        border-radius: 20px;
+        &--text{
+            font-size: 1.125rem;
+            line-height: 34px;
+            color: var(--paragraph-color);
+        }     
+    }
+    &__author{
+        display: flex;
+        gap: 16px;
+        &--details{
+            margin: auto 0;
+        }
+        &--name{
+            color: var(--header-color);
+        }
+        &--work{
+            line-height: 34px;
+            color: var(--paragraph-color);
+        }
+    }
+    @include media-md{
+        &__content{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @include media-lg{
+        &__content{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+
+.map{
+    &__iframe{
+        width: 100%;
+        height: 50vh;
+    }
+    // background-image: url("/assests/img/bg.png");
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // height: 50vh;
 }

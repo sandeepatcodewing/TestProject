@@ -73,12 +73,10 @@ img{
     padding: 16px 24px;
     border-radius: 10px;
     color: #fff;
-    a{
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        gap: 16px;
-    }
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 16px;
     &:hover{
         .right-arrow{
             fill: var(--dark-green);
