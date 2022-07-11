@@ -13,6 +13,7 @@ body{
     font-size: 1rem;
     font-family: 'Inter', sans-serif;
     line-height: 24px;
+    background: var(--background-section-color);
 }
 
 h1,h2{
@@ -20,25 +21,25 @@ h1,h2{
 }
 
 h1{
-    font-size: 60px;
+    font-size: 3.75rem;
     line-height: 75px;
 }
 
 h2{
-    font-size: 45px;
+    font-size: 2.8125rem;
     line-height: 55px;
 }
 
 h3{
-    font-size: 36px;
+    font-size: 2.25rem;
 }
 
 h4{
-    font-size: 25px;
+    font-size: 1.5625rem;
 }
 
 h5{
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 ul{
@@ -62,6 +63,10 @@ img{
     font-weight: 400;
     line-height: 40px;
     color: var(--paragraph-color);
+}
+
+.background-white{
+    background-color: #fff;
 }
 
 %button-primary{
@@ -131,6 +136,7 @@ img{
     text-align: center;
 }
 
+
 .card-title{
     font-size: 1.5rem;
     line-height: 36px;
@@ -143,3 +149,11 @@ img{
     color: var(--paragraph-color);
     line-height: 28px;
 }
+
+.yellow-text{
+    font-size: 1.125rem;
+    color: var(--button-color);
+    line-height: 34px;
+    font-weight: 500;
+}
+

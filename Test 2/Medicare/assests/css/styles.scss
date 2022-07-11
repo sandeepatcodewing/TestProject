@@ -471,6 +471,7 @@
     }
     &__dots{
         &--image{
+            display: inline;
             position: absolute;
             bottom: -57px;
             right: -90px;
@@ -484,6 +485,11 @@
         &__cardlist{
             grid-template-columns: repeat(1,1fr);
         }
+        &__dots{
+            &--image{
+                display: none;
+            }
+        }
     }
     @include media-md{
         &__texts{
@@ -491,6 +497,11 @@
         }
         &__cardlist{
             grid-template-columns: repeat(2,1fr);
+        }
+        &__dots{
+            &--image{
+                display: none;
+            }
         }
     }
     @include media-lg{
@@ -509,5 +520,455 @@
             position: relative;
             grid-template-columns: repeat(4,1fr);
         }
+        &__dots{
+            &--image{
+                display: inline;
+            }
+        }
+    }
+}
+
+// appointment styling
+.appointment{
+    &__content{
+        display: grid;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+    &__texts{
+        h2{
+            padding: 16px 0px;
+        }
+    }
+    &__form{
+        display: grid;
+        row-gap: 24px;
+        padding: 32px 40px;
+        border-radius: 20px;
+        box-shadow: 0px 12px 48px rgba(21, 36, 59, 0.08);
+        p{
+            display: grid;
+        }
+    }
+    input, select{
+        max-width: 100%;
+        padding: 14px 5px;
+        border-radius: 10px;
+        color: rgba(5, 32, 61, 0.28);
+        border: 1px solid rgba(5, 32, 61, 0.1);
+    }
+    label{
+        font-size: 1.125rem;
+        line-height: 34px;
+        padding-bottom: 4px;
+    }
+    &__details{
+        display: grid;
+        column-gap: 30px;
+        row-gap: 10px;
+    }
+    &__button{
+        margin-top: 8px;
+        a{
+            justify-content: center;
+        }
+    }
+    @include media-sm{
+        &__details{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    @include media-md{
+        &__content{
+            grid-template-columns: repeat(1,1fr);
+        }
+        &__details{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @include media-lg{
+        &__content{
+            grid-template-columns: repeat(2,1fr);
+        }
+        &__details{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+
+// mobile styling   
+.mobile{
+    &__content{
+        display: grid;
+        column-gap: 78px;
+        row-gap: 40px;
+    }
+    &__store{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 4px;
+    }
+    h2{
+        margin: 16px 0px;
+    }
+    .paragraph-content{
+        margin: 16px 0px 40px 0px;
+    }
+    @include media-sm{
+        &__content{
+            grid-template-columns: repeat(1,1fr);
+        }
+        &__image{
+            text-align: center;
+        }        
+    }
+    @include media-md{
+        &__image{
+            text-align: center;
+        }        
+    }
+    @include media-lg{
+        &__content{
+            grid-template-columns: repeat(2,1fr);
+        }      
+    }
+}
+
+// experts styling
+.experts{
+    &__content{
+        position: relative;
+    }
+    &__texts{
+        max-width: 649px;
+        margin: 0 auto;
+        h2{
+            padding: 16px 0px;
+        }
+    }
+    &__cardslist{
+        padding: 64px 0px 48px 0px;
+        display: grid;
+        row-gap: 30px;
+        column-gap: 30px;
+    }
+    &__card-text{
+        p{
+            font-size: 1.25rem;
+            line-height: 32px;
+            font-weight: 600;
+        }
+        span{
+            line-height: 28px;
+            font-weight: 200;
+        }
+    }
+    @include media-sm{
+        &__cardslist{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    @include media-md{
+        &__cardslist{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    @include media-lg{
+        &__cardslist{
+            grid-template-columns: repeat(4,1fr);
+        }
+    }
+}
+
+//feedback
+.feedback{
+    &__content{
+        display: grid;
+        column-gap: 100px;
+        row-gap: 30px;
+    }
+    &__texts{
+        h2{
+            padding: 16px 0px;
+        }
+    }
+    &__button{
+        margin-top: 100px;
+        text-align: center;
+    }
+    &__quotes{
+        padding: 40px 0px 0px 0px;
+        display: grid;
+    }
+    &__paragraph{
+        &--text{
+            font-size: 1.125rem;
+            line-height: 34px;
+            color: var(--paragraph-color);
+        }
+    }
+    h5{
+        padding: 24px 0px 2px 0px;
+    }
+    @include media-lg{
+        &__content{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @include media-xl{
+        &__content{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+
+// blog styling
+.blog{
+    &__content{
+        h2{
+            padding: 16px 0px;
+        }
+    }
+    &__cardlist{
+        display: grid;
+        row-gap: 30px;
+        column-gap: 30px;
+        padding: 56px 0px 48px 0px;
+    }
+    &__card{
+        border-radius: 20px;
+        box-shadow: 0px 12px 48px rgba(21, 36, 59, 0.08);
+        &--content{
+            display: grid;
+            row-gap: 8px;
+            padding: 30px;
+        }
+        &--category{
+            font-size: 0.875rem;
+            color: var(--paragraph-color);
+            line-height: 16.94px;
+        }
+        &--title{
+            color: var(--header-color);
+            line-height: 35px;
+        }
+        &--date{
+            padding: 8px 0px 2px 0px;
+            font-size: 0.875rem;
+            color: var(--paragraph-color);
+            line-height: 16.94px;
+        }
+    }
+    &__image{
+        img{
+            border-radius: 20px 20px 0px 0px;
+        }
+    }
+    &__button{
+        text-align: center;
+    }
+    @include media-sm{
+        &__cardlist{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    @include media-md{
+        &__cardlist{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @include media-lg{
+        &__cardlist{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    @include media-xl{
+        &__cardlist{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+}
+
+// assist styling
+.assist{
+    &__content{
+        position: relative;
+        display: grid;
+        row-gap: 20px;
+        padding: 64px 60px;
+        background: var(--primary-color);
+        border-radius: 20px;
+    }
+    &__corner{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+    h2{
+        font-size: 2.5rempx;
+        padding-bottom: 8px;
+    }
+    p{
+        padding-top: 8px;
+        font-size: 1.25rem;
+    }
+    &__text{
+       &--white{
+        color: #fff;
+       }
+    }
+    &__button{
+        margin: auto;
+    }
+    &__corner-dot{
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+    }
+    @include media-lg{
+        &__content{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+
+// reach us styling
+.reach{
+    padding: 40px 0px 25px 0px;
+    &__content{
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+    &__appointment{
+        display: flex;
+        gap: 20px;
+        &--image{
+            margin: auto 0;
+        }
+    }    
+    @include media-sm{
+        &__content{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    @include media-md{
+        &__content{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @include media-lg{
+        &__content{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+}
+
+// main footer styling
+.footer{
+    padding: 80px 0px 48px 0px;
+    border-top: 1px solid rgba(103, 106, 138, 0.15);
+    &__content{
+        display: grid;
+        row-gap: 30px;
+        column-gap: 30px;
+    }
+    &__text{
+        font-size: 1.125rem;
+        line-height: 34px;
+        color: var(--header-color);
+        font-weight: 600;
+        &--bottom{
+            width: 40px;
+            height: 3px;
+            background: var(--header-color);
+            border: none;
+            border-radius: 50px;
+        }
+        &--paragraph{
+            font-size: 1.125rem;
+            line-height: 34px;
+            color: var(--paragraph-color);
+            font-weight: 400;
+            padding: 30px 0px;
+        }
+        &--title{
+            color: var(--header-color);
+            line-height: 35px;
+            padding: 30px 0px 0px 0px;
+        }
+        &--date{
+            padding-top: 4px;
+            font-size: 0.875rem;
+            line-height: 16.94px;
+            color: var(--paragraph-color);
+        }
+        &--time{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    &__socialmedia{
+        display: flex;
+        gap: 25px;
+    }
+    &__schedule{
+        padding: 30px 0px;
+    }
+    &__row{
+        padding: 12px 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__icon{
+        color: var(--header-color);
+    }
+    .border-bottom{
+        border-bottom: 1px solid rgba(103, 106, 138, 0.15);
+    }
+    @include media-sm{
+        &__content{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    @include media-md{
+        &__content{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @include media-lg{
+        &__content{
+            grid-template-columns: repeat(4,1fr);
+        }
+    }
+    @include media-xl{
+        &__content{
+            grid-template-columns: 284.5px 125px 350px 284.5px;
+
+        }
+    }
+}
+
+// copyright
+.copyright{
+    background: var(--header-color);
+    padding: 16px 0px;
+    color: var(--paragraph-color);
+    &__content{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__link{
+        color: #fff;
+        display: flex;
+        gap: 20px;
+    }
+    .text-white{
+        color: #fff;
+    }
+    @include media-sm{
+        display: none;
     }
 }
