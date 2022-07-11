@@ -87,31 +87,6 @@
     &__hamburger{
         color: #000;
         font-size: 1.875rem;
-        @include media-sm{
-            display: inline;
-            margin: auto 0;
-        }
-        @include media-md{
-            display: inline;
-            margin: auto 0;
-        }
-        @include media-xl{
-            display: none;
-        }
-    }
-    &__menu{
-        @include media-sm{
-            display: none;
-        }
-        @include media-md{
-            display: none;
-        }
-        @include media-xl{
-            @include flex-between;
-            gap: 40px;
-            font-weight: 400;
-            font-size: 1.125rem;
-        }
     }
     &__navbar{
         margin: auto 0;
@@ -130,6 +105,36 @@
     }
     &__arrow{
         fill: #fff;
+    }
+    @include media-md{
+        &__hamburger{
+            display: inline;
+            margin: auto 0;
+        }
+        &__menu{
+            display: none;
+        }
+    }
+    @include media-sm{
+        &__hamburger{
+            display: inline;
+            margin: auto 0;
+        }
+        &__menu{
+            display: none;
+        }
+    }
+
+    @include media-xl{
+        &__hamburger{
+            display: none;
+        }
+        &__menu{
+            @include flex-between;
+            gap: 40px;
+            font-weight: 400;
+            font-size: 1.125rem;
+        }
     }
 }
 
@@ -470,15 +475,15 @@
             color: #fff;
         }
     }
-    &__dots{
-        &--image{
-            display: inline;
-            position: absolute;
-            bottom: -57px;
-            right: -90px;
-            z-index: -1;
-        }
-    }
+    // &__dots{
+    //     &--image{
+    //         display: inline;
+    //         position: absolute;
+    //         bottom: -57px;
+    //         right: -90px;
+    //         z-index: -1;
+    //     }
+    // }
     @include media-sm{
         &__texts{
             grid-template-columns: repeat(1,1fr);
@@ -521,6 +526,16 @@
         &__cardlist{
             position: relative;
             grid-template-columns: repeat(4,1fr);
+            &::after{
+                content: url("/assests/img/shapes/dots.png");
+                position: absolute;
+                bottom: -28px;
+                right: -46px;
+                color: red;
+                width: 128px;
+                height: 108px;
+                z-index: -1;
+            }
         }
         &__dots{
             &--image{
@@ -1148,9 +1163,4 @@
         width: 100%;
         height: 50vh;
     }
-    // background-image: url("/assests/img/bg.png");
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // height: 50vh;
 }

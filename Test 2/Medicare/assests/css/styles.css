@@ -205,30 +205,6 @@ button {
   .logo-nav__hamburger {
     color: #000;
     font-size: 1.875rem; }
-    @media (max-width: 767px) {
-      .logo-nav__hamburger {
-        display: inline;
-        margin: auto 0; } }
-    @media (min-width: 768px) {
-      .logo-nav__hamburger {
-        display: inline;
-        margin: auto 0; } }
-    @media (min-width: 1200px) {
-      .logo-nav__hamburger {
-        display: none; } }
-  @media (max-width: 767px) {
-    .logo-nav__menu {
-      display: none; } }
-  @media (min-width: 768px) {
-    .logo-nav__menu {
-      display: none; } }
-  @media (min-width: 1200px) {
-    .logo-nav__menu {
-      display: flex;
-      justify-content: space-between;
-      gap: 40px;
-      font-weight: 400;
-      font-size: 1.125rem; } }
   .logo-nav__navbar {
     margin: auto 0; }
   .logo-nav__list {
@@ -241,6 +217,27 @@ button {
     font-weight: 400; }
   .logo-nav__arrow {
     fill: #fff; }
+  @media (min-width: 768px) {
+    .logo-nav__hamburger {
+      display: inline;
+      margin: auto 0; }
+    .logo-nav__menu {
+      display: none; } }
+  @media (max-width: 767px) {
+    .logo-nav__hamburger {
+      display: inline;
+      margin: auto 0; }
+    .logo-nav__menu {
+      display: none; } }
+  @media (min-width: 1200px) {
+    .logo-nav__hamburger {
+      display: none; }
+    .logo-nav__menu {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      font-weight: 400;
+      font-size: 1.125rem; } }
 
 .banner__content {
   position: relative;
@@ -514,13 +511,6 @@ button {
     background: var(--primary-color);
     color: #fff; }
 
-.process__dots--image {
-  display: inline;
-  position: absolute;
-  bottom: -57px;
-  right: -90px;
-  z-index: -1; }
-
 @media (max-width: 767px) {
   .process__texts {
     grid-template-columns: repeat(1, 1fr); }
@@ -550,6 +540,15 @@ button {
   .process__cardlist {
     position: relative;
     grid-template-columns: repeat(4, 1fr); }
+    .process__cardlist::after {
+      content: url("/assests/img/shapes/dots.png");
+      position: absolute;
+      bottom: -28px;
+      right: -46px;
+      color: red;
+      width: 128px;
+      height: 108px;
+      z-index: -1; }
   .process__dots--image {
     display: inline; } }
 
