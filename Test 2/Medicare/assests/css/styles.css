@@ -40,8 +40,14 @@ ul {
 img {
   max-width: 100%; }
 
+.hover-item a:hover {
+  color: var(--button-color); }
+
 .breathing-space {
   padding: 96px 0px; }
+  @media (max-width: 767px) {
+    .breathing-space {
+      padding: 40px 0px; } }
 
 .fa-circle-check {
   color: #0EB654; }
@@ -80,10 +86,15 @@ img {
   margin-top: 12px;
   font-weight: 600; }
 
+.btn-center {
+  display: flex;
+  justify-content: center; }
+
 .right-arrow {
   fill: #fff; }
 
 .active {
+  font-weight: 600;
   color: var(--header-color); }
 
 .section-category {
@@ -93,9 +104,6 @@ img {
   padding: 10px 24px;
   background-color: var(--light-green);
   border-radius: 20px; }
-  .section-category:hover {
-    color: #fff;
-    background: var(--button-color); }
 
 .about_care {
   font-size: 1.125rem;
@@ -117,7 +125,7 @@ img {
   color: var(--paragraph-color);
   line-height: 28px; }
 
-.yellow-text {
+.yellow-text a {
   font-size: 1.125rem;
   color: var(--button-color);
   line-height: 34px;
@@ -224,8 +232,8 @@ button {
   .logo-nav__list {
     display: flex;
     gap: 20px; }
-    .logo-nav__list li:hover {
-      color: var(--button-color); }
+    .logo-nav__list a {
+      color: var(--paragraph-color); }
   .logo-nav__button {
     color: #fff;
     font-weight: 400; }
@@ -447,13 +455,12 @@ button {
   color: var(--button-color);
   padding: 14px 24px;
   border-radius: 10px;
-  margin-top: 13px; }
-  .services__button--card a {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 16px;
-    font-weight: 600; }
+  margin-top: 13px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 16px;
+  font-weight: 600; }
   .services__button--card .right-arrow {
     fill: var(--button-color); }
   .services__button--card:hover {
@@ -516,6 +523,7 @@ button {
   .process__texts {
     grid-template-columns: repeat(1, 1fr); }
   .process__cardlist {
+    padding-top: 32px;
     grid-template-columns: repeat(1, 1fr); }
   .process__dots--image {
     display: none; } }
@@ -561,6 +569,8 @@ button {
   .appointment__social--icons {
     display: flex;
     gap: 24px; }
+    .appointment__social--icons a {
+      color: var(--paragraph-color); }
 
 .appointment__icon {
   color: var(--paragraph-color); }
@@ -572,6 +582,7 @@ button {
   row-gap: 24px;
   padding: 32px 40px;
   border-radius: 20px;
+  background-color: #fff;
   box-shadow: 0px 12px 48px rgba(21, 36, 59, 0.08); }
   .appointment__form p {
     display: grid; }
@@ -622,9 +633,9 @@ button {
   row-gap: 40px; }
 
 .mobile__store {
-  display: grid;
+  display: inline-grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 4px; }
+  column-gap: 25px; }
 
 .mobile h2 {
   margin: 16px 0px; }
@@ -656,9 +667,8 @@ button {
     padding: 16px 0px; }
 
 .experts__cardslist {
-  padding: 64px 0px 48px 0px;
   display: grid;
-  row-gap: 50px;
+  row-gap: 15px;
   column-gap: 30px; }
 
 .experts__card-text p {
@@ -673,10 +683,12 @@ button {
 
 @media (max-width: 767px) {
   .experts__cardslist {
+    padding: 32px 0px 12px 0px;
     grid-template-columns: repeat(1, 1fr); } }
 
 @media (min-width: 768px) {
   .experts__cardslist {
+    padding: 32px 0px 12px 0px;
     grid-template-columns: repeat(2, 1fr); } }
 
 @media (min-width: 992px) {
@@ -685,6 +697,7 @@ button {
 
 @media (min-width: 1200px) {
   .experts__cardslist {
+    padding: 64px 0px 48px 0px;
     grid-template-columns: repeat(4, 1fr); } }
 
 .feedback__content {
@@ -696,7 +709,6 @@ button {
   padding: 16px 0px; }
 
 .feedback__button {
-  margin-top: 100px;
   text-align: center; }
 
 .feedback__quotes {
@@ -711,20 +723,28 @@ button {
 .feedback h5 {
   padding: 24px 0px 2px 0px; }
 
+@media (max-width: 767px) {
+  .feedback__button {
+    margin-top: 25px; } }
+
 @media (min-width: 992px) {
   .feedback__content {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .feedback__button {
+    margin-top: 50px; } }
 
 @media (min-width: 1200px) {
   .feedback__content {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .feedback__button {
+    margin-top: 100px; } }
 
 .blog__content h2 {
   padding: 16px 0px; }
 
 .blog__cardlist {
   display: grid;
-  row-gap: 30px;
+  row-gap: 20px;
   column-gap: 30px;
   padding: 56px 0px 48px 0px; }
 
@@ -772,7 +792,7 @@ button {
 
 .assist__content {
   position: relative;
-  display: grid;
+  display: inline-grid;
   row-gap: 20px;
   padding: 64px 60px;
   background: var(--primary-color);
@@ -784,7 +804,7 @@ button {
   right: 0px; }
 
 .assist h2 {
-  font-size: 2.5rempx;
+  font-size: 2.5rem;
   padding-bottom: 8px; }
 
 .assist p {
@@ -836,7 +856,7 @@ button {
   border-top: 1px solid rgba(103, 106, 138, 0.15); }
   .footer__content {
     display: grid;
-    row-gap: 30px;
+    row-gap: 10px;
     column-gap: 30px; }
   .footer__text {
     font-size: 1.125rem;
@@ -859,8 +879,10 @@ button {
       color: var(--header-color);
       line-height: 35px;
       padding: 30px 0px 0px 0px; }
-      .footer__text--title:hover {
-        color: var(--button-color); }
+      .footer__text--title a {
+        color: var(--header-color); }
+        .footer__text--title a:hover {
+          color: var(--button-color); }
     .footer__text--date {
       padding-top: 4px;
       font-size: 0.875rem;
@@ -872,6 +894,10 @@ button {
   .footer__socialmedia {
     display: flex;
     gap: 25px; }
+    .footer__socialmedia a {
+      color: var(--paragraph-color); }
+  .footer__links a {
+    color: var(--paragraph-color); }
   .footer__schedule {
     padding: 30px 0px; }
   .footer__row {
@@ -880,15 +906,13 @@ button {
     justify-content: space-between; }
   .footer__icon {
     color: var(--header-color); }
-    .footer__icon:hover {
-      color: var(--button-color); }
-  .footer li:hover {
-    color: var(--button-color); }
   .footer .border-bottom {
     border-bottom: 1px solid rgba(103, 106, 138, 0.15); }
   @media (max-width: 767px) {
-    .footer__content {
-      grid-template-columns: repeat(1, 1fr); } }
+    .footer {
+      padding: 40px 0px 12px 0px; }
+      .footer__content {
+        grid-template-columns: repeat(1, 1fr); } }
   @media (min-width: 768px) {
     .footer__content {
       grid-template-columns: repeat(2, 1fr); } }
@@ -907,14 +931,17 @@ button {
     display: flex;
     justify-content: space-between; }
   .copyright__link {
-    color: #fff;
     display: flex;
     gap: 20px; }
+    .copyright__link a {
+      color: #fff; }
   .copyright .text-white {
     color: #fff; }
   @media (max-width: 767px) {
-    .copyright {
-      display: none; } }
+    .copyright__content {
+      text-align: center;
+      display: grid;
+      justify-items: center; } }
 
 .section__content {
   position: relative; }

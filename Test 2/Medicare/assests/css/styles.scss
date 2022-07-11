@@ -62,7 +62,7 @@
         @include grid-auto;
         column-gap: 10.74px;
         &:hover{
-            color: var(--button-color);
+            color: var(--button-color)
         }
     }
     &__socialmedia{
@@ -116,10 +116,9 @@
     &__list{
         display: flex;
         gap: 20px;
-        li{
-            &:hover{
-                color: var(--button-color);
-            }
+        a{
+        color: var(--paragraph-color);
+
         }
     }
     &__button{
@@ -398,13 +397,11 @@
             padding: 14px 24px;
             border-radius: 10px;
             margin-top: 13px;
-            a{
-                display: flex;
-                justify-content: end;
-                align-items: center;
-                gap: 16px;
-                font-weight: 600;
-            }
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 16px;
+            font-weight: 600;
             .right-arrow{
                 fill: var(--button-color);
             }
@@ -484,6 +481,7 @@
             grid-template-columns: repeat(1,1fr);
         }
         &__cardlist{
+            padding-top: 32px;
             grid-template-columns: repeat(1,1fr);
         }
         &__dots{
@@ -553,6 +551,9 @@
         &--icons{
             display: flex;
             gap: 24px;
+            a{
+                color: var(--paragraph-color);
+            }
         }
     }
     &__icon{
@@ -566,6 +567,7 @@
         row-gap: 24px;
         padding: 32px 40px;
         border-radius: 20px;
+        background-color: #fff;
         box-shadow: 0px 12px 48px rgba(21, 36, 59, 0.08);
         p{
             display: grid;
@@ -626,9 +628,9 @@
         row-gap: 40px;
     }
     &__store{
-        display: grid;
+        display: inline-grid;
         grid-template-columns: repeat(2,1fr);
-        column-gap: 4px;
+        column-gap: 25px;
     }
     h2{
         margin: 16px 0px;
@@ -669,9 +671,8 @@
         }
     }
     &__cardslist{
-        padding: 64px 0px 48px 0px;
         display: grid;
-        row-gap: 50px;
+        row-gap: 15px;
         column-gap: 30px;
     }
     &__card-text{
@@ -688,11 +689,13 @@
     }
     @include media-sm{
         &__cardslist{
+            padding: 32px 0px 12px 0px;
             grid-template-columns: repeat(1,1fr);
         }
     }
     @include media-md{
         &__cardslist{
+            padding: 32px 0px 12px 0px;
             grid-template-columns: repeat(2,1fr);
         }
     }
@@ -703,6 +706,7 @@
     }
     @include media-xl{
         &__cardslist{
+            padding: 64px 0px 48px 0px;
             grid-template-columns: repeat(4,1fr);
         }
     }
@@ -721,7 +725,6 @@
         }
     }
     &__button{
-        margin-top: 100px;
         text-align: center;
     }
     &__quotes{
@@ -738,14 +741,25 @@
     h5{
         padding: 24px 0px 2px 0px;
     }
+    @include media-sm{
+        &__button{
+            margin-top: 25px;
+        }
+    }
     @include media-lg{
         &__content{
             grid-template-columns: repeat(2,1fr);
+        }
+        &__button{
+            margin-top: 50px;
         }
     }
     @include media-xl{
         &__content{
             grid-template-columns: repeat(2,1fr);
+        }
+        &__button{
+            margin-top: 100px;
         }
     }
 }
@@ -759,7 +773,7 @@
     }
     &__cardlist{
         display: grid;
-        row-gap: 30px;
+        row-gap: 20px;
         column-gap: 30px;
         padding: 56px 0px 48px 0px;
     }
@@ -821,7 +835,7 @@
 .assist{
     &__content{
         position: relative;
-        display: grid;
+        display: inline-grid;
         row-gap: 20px;
         padding: 64px 60px;
         background: var(--primary-color);
@@ -833,7 +847,7 @@
         right: 0px;
     }
     h2{
-        font-size: 2.5rempx;
+        font-size: 2.5rem;
         padding-bottom: 8px;
     }
     p{
@@ -903,7 +917,7 @@
     border-top: 1px solid rgba(103, 106, 138, 0.15);
     &__content{
         display: grid;
-        row-gap: 30px;
+        row-gap: 10px;
         column-gap: 30px;
     }
     &__text{
@@ -928,9 +942,12 @@
         &--title{
             color: var(--header-color);
             line-height: 35px;
-            padding: 30px 0px 0px 0px;  
-            &:hover{
-                color: var(--button-color);
+            padding: 30px 0px 0px 0px;
+            a{
+                color: var(--header-color);
+                &:hover{
+                    color: var(--button-color);
+                }
             }
         }
         &--date{
@@ -947,6 +964,14 @@
     &__socialmedia{
         display: flex;
         gap: 25px;
+        a{
+            color: var(--paragraph-color);
+        }
+    }
+    &__links{
+        a{
+            color: var(--paragraph-color);
+        }
     }
     &__schedule{
         padding: 30px 0px;
@@ -958,19 +983,12 @@
     }
     &__icon{
         color: var(--header-color);
-        &:hover{
-            color: var(--button-color);
-        }
-    }
-    li{
-        &:hover{
-            color: var(--button-color);
-        }
     }
     .border-bottom{
         border-bottom: 1px solid rgba(103, 106, 138, 0.15);
     }
     @include media-sm{
+        padding: 40px 0px 12px 0px;
         &__content{
             grid-template-columns: repeat(1,1fr);
         }
@@ -1003,15 +1021,21 @@
         justify-content: space-between;
     }
     &__link{
-        color: #fff;
         display: flex;
         gap: 20px;
+        a{
+            color: #fff;
+        }
     }
     .text-white{
         color: #fff;
     }
     @include media-sm{
-        display: none;
+        &__content{
+            text-align: center;
+            display: grid;
+            justify-items: center;
+        }
     }
 }
 

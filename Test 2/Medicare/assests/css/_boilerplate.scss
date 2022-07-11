@@ -1,3 +1,5 @@
+@import 'media';
+
 :root{
     --primary-color: linear-gradient(180deg, rgba(137,167,255,1) 0%, rgba(71,111,228,1) 100%); 
     --button-color: #EC8E00;
@@ -50,8 +52,19 @@ img{
     max-width: 100%;
 }
 
+.hover-item{
+    a{
+        &:hover{
+            color: var(--button-color);
+        }
+    }
+}
+
 .breathing-space{
     padding: 96px 0px;
+    @include media-sm{
+        padding: 40px 0px;
+    }
 }
 
 .fa-circle-check{
@@ -102,11 +115,17 @@ img{
     font-weight: 600;
 }
 
+.btn-center{
+    display: flex;
+    justify-content: center;
+}
+
 .right-arrow{
     fill: #fff;
 }
 
 .active{
+    font-weight: 600;
     color: var(--header-color);
 }
 
@@ -117,10 +136,10 @@ img{
     padding: 10px 24px;
     background-color: var(--light-green);
     border-radius: 20px;
-    &:hover{
-        color: #fff;
-        background: var(--button-color);
-    }
+    // &:hover{
+    //     color: #fff;
+    //     background: var(--button-color);
+    // }
 }
 
 .about_care{
@@ -149,9 +168,11 @@ img{
 }
 
 .yellow-text{
-    font-size: 1.125rem;
-    color: var(--button-color);
-    line-height: 34px;
-    font-weight: 500;
+    a{
+        font-size: 1.125rem;
+        color: var(--button-color);
+        line-height: 34px;
+        font-weight: 500;
+    }
 }
 
