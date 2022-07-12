@@ -63,27 +63,72 @@
       <section class="logo-nav background-white">
         <div class="container">
           <div class="logo-nav__section">
-            <a href="/"><img class="logo-nav__logo" src="/assests/img/logo/logo.png" alt="Logo" /></a>
-            <div class="logo-nav__hamburger">
-              <span><i class="fa-solid fa-bars"></i></span>
+            <div class="logo-nav__logo">
+              <a href="/"><img src="/assests/img/logo/logo.png" alt="Logo" /></a>
             </div>
-            <div class="logo-nav__menu">
-              <nav class="logo-nav__navbar">
-                <ul class="logo-nav__list hover-item">
-                  <li><a href="/index.html">Home</a></li>
-                  <li><a href="/about-us.html">About us</a></li>
+            <button class="mobile-nav-toggle" aria-controls="show-navigation" aria-expanded="false">
+              <span class="sr-only"></span>
+            </button>
+            <div class="logo-nav__navbar show-navigation" id="show-navigation" data-visible="false">
+              <nav>
+                <ul class="logo-nav__list">
+                  <li class="active"><a href="/index.html">Home</a></li>
+                  <li><a href="/about-us.html">About Us</a></li>
                   <li><a href="/services.html">Services</a></li>
-                  <li class="active"><a href="/team.html">Team</a></li>
+                  <li><a href="/team.html">Team</a></li>
                   <li><a href="/testimonal.html">Testimonal</a></li>
                   <li><a href="/blog.html">Blog</a></li>
                 </ul>
               </nav>
-              <a class="logo-nav__button btn-primary" href="/contact.html">
-                Contact
-                <svg class="logo-nav__arrow right-arrow" version="1.1" id="Layer_1" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 330 330" style="enable-background: new 0 0 330 330" xml:space="preserve">
-                  <path id="XMLID_27_" d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213C232.322,253.535,236.161,255,240,255 s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0 c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z" />
-                </svg>
-              </a>
+              <div class="logo-nav__button">
+                <a href="/contact.html">
+                  <p class="btn-primary">
+                    Contact
+                    <img src="/assests/img/icons/right-24.png" alt="" />
+                  </p>
+                </a>
+              </div>
+              <div class="logo-nav__mobile">
+                <div class="logo-nav__detail--gap">
+                  <div class="logo-nav__icon">
+                    <span class="logo-nav__phone">
+                      <i class="fa-solid fa-phone"></i>
+                    </span>
+                    <span class="logo-nav__text">(012) 345 - 6789</span>
+                  </div>
+                  <div class="logo-nav__icon">
+                    <span class="logo-nav__mail"><i class="fa-solid fa-envelope"></i></span>
+                    <span class="logo-nav__text">mail@example.com</span>
+                  </div>
+                </div>
+                <div class="logo-nav__socialmedia hover-item">
+                  <span class="logo-nav__icon">
+                    <a href="">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                  </span>
+                  <span class="logo-nav__icon">
+                    <a href="">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                  </span>
+                  <span class="logo-nav__icon">
+                    <a href="">
+                      <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                  </span>
+                  <span class="logo-nav__icon">
+                    <a href="">
+                      <i class="fa-brands fa-youtube"></i>
+                    </a>
+                  </span>
+                  <span class="logo-nav__icon">
+                    <a href="">
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -368,5 +413,6 @@
         </div>
       </section>
     </footer>
+    <script src="/assests/js/navigation-menu.js"></script>
   </body>
 </html>

@@ -65,8 +65,8 @@ img {
   padding: 16px 24px;
   border-radius: 10px;
   color: #fff;
-  display: flex;
-  justify-content: end;
+  display: inline-flex;
+  justify-content: start;
   align-items: center;
   gap: 16px; }
   .btn-primary:hover, .btn-secondary:hover {
@@ -158,7 +158,7 @@ button {
 
 @media (min-width: 768px) {
   .container {
-    max-width: 720px; } }
+    max-width: 800px; } }
 
 @media (min-width: 992px) {
   .container {
@@ -196,48 +196,134 @@ button {
     .header-top {
       display: none; } }
 
-.logo-nav {
-  color: var(--paragraph-color);
+.logo-nav__section {
+  position: relative;
   padding: 20px 0px; }
+
+.logo-nav__arrow-down {
+  padding-left: 2px;
+  color: var(--paragraph-color); }
+
+.logo-nav__list a {
+  color: var(--paragraph-color); }
+
+@media (max-width: 767px) {
+  .logo-nav .show-navigation {
+    position: fixed;
+    background-color: #fff;
+    flex-direction: column;
+    inset: 0 0 0 40%;
+    padding: 80px 30px;
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+    z-index: 1; }
+  .logo-nav .show-navigation[data-visible="true"] {
+    transform: translateX(0%); }
+  .logo-nav .mobile-nav-toggle {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    z-index: 999;
+    width: 30px;
+    aspect-ratio: 1;
+    background-image: url("/assests/img/icons/hamburger.png");
+    background-color: transparent; }
+  .logo-nav .mobile-nav-toggle[aria-expanded="true"] {
+    background-image: url("/assests/img/icons/close.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed; }
+  .logo-nav__navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--paragraph-color); }
+  .logo-nav__button {
+    padding: 16px 0px 0px 0px; }
+  .logo-nav__list {
+    display: grid;
+    row-gap: 30px; }
+    .logo-nav__list a {
+      color: var(--paragraph-color); }
+  .logo-nav__detail--gap {
+    padding: 16px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; }
+  .logo-nav__socialmedia {
+    display: flex;
+    gap: 20px; }
+    .logo-nav__socialmedia a {
+      color: var(--paragraph); }
+  .logo-nav__drop-down {
+    position: relative; }
+    .logo-nav__drop-down:hover .logo-nav__drop-down--menu {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 16px 10px;
+      border: 1px solid #f5f5f5;
+      min-width: 200px;
+      z-index: 1;
+      background-color: #fff; }
+    .logo-nav__drop-down--menu {
+      display: none;
+      position: absolute;
+      left: 0px;
+      text-align: start; }
+      .logo-nav__drop-down--menu a:hover {
+        color: var(--button-color); } }
+
+@media (min-width: 768px) {
   .logo-nav__section {
     display: flex;
     justify-content: space-between; }
-  .logo-nav__hamburger {
-    color: #000;
-    font-size: 1.875rem; }
   .logo-nav__navbar {
-    margin: auto 0; }
+    display: flex;
+    gap: 10px; }
+    .logo-nav__navbar nav {
+      margin: auto; }
   .logo-nav__list {
     display: flex;
-    gap: 20px; }
-    .logo-nav__list a {
-      color: var(--paragraph-color); }
-  .logo-nav__button {
-    color: #fff;
-    font-weight: 400; }
-  .logo-nav__arrow {
-    fill: #fff; }
-  @media (min-width: 768px) {
-    .logo-nav__hamburger {
-      display: inline;
-      margin: auto 0; }
-    .logo-nav__menu {
-      display: none; } }
-  @media (max-width: 767px) {
-    .logo-nav__hamburger {
-      display: inline;
-      margin: auto 0; }
-    .logo-nav__menu {
-      display: none; } }
-  @media (min-width: 1200px) {
-    .logo-nav__hamburger {
-      display: none; }
-    .logo-nav__menu {
-      display: flex;
-      justify-content: space-between;
-      gap: 40px;
-      font-weight: 400;
-      font-size: 1.125rem; } }
+    gap: 10px; }
+    .logo-nav__list li {
+      margin: auto; }
+  .logo-nav__mobile {
+    display: none; }
+  .logo-nav__drop-down {
+    position: relative; }
+    .logo-nav__drop-down:hover .logo-nav__drop-down--menu {
+      display: block;
+      flex-direction: column;
+      gap: 10px;
+      padding: 16px 10px;
+      border: 1px solid #f5f5f5;
+      width: 100%;
+      background-color: #fff; }
+    .logo-nav__drop-down--menu {
+      display: none;
+      position: absolute;
+      left: 0px;
+      text-align: start; }
+      .logo-nav__drop-down--menu a:hover {
+        color: var(--button-color); } }
+
+@media (min-width: 1200px) {
+  .logo-nav__section {
+    display: flex;
+    justify-content: space-between; }
+  .logo-nav__navbar {
+    display: flex;
+    gap: 30px; }
+    .logo-nav__navbar nav {
+      margin: auto; }
+  .logo-nav__list {
+    display: flex;
+    gap: 40px; }
+    .logo-nav__list li {
+      margin: auto; }
+  .logo-nav__mobile {
+    display: none; } }
 
 .banner__content {
   position: relative;

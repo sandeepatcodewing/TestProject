@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(22, 19, 19, 0.822);
+}
+
+a, a:visited, a:checked{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0px 16px;
+}
+.navbar{
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2{
+    color: #fff;
+}
+
+.hamburger{
+    width: 40px;
+    height: 5px;
+    border-radius: 15px;
+    background-color: #fff;
+    position: relative;
+    transition: 0.25s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after{
+    content: '';
+    width: 40px;
+    height: 5px;
+    border-radius: 15px;
+    background-color: #fff;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+}
+
+.hamburger::before{
+    transform: translateY(-10px);
+}
+.hamburger::after{
+    transform: translateY(10px);
+}
+
+.animation{
+    background-color: transparent;
+}
+
+.animation::before{
+    transform: rotate(-45deg);
+}
+
+.animation::after{
+    transform: rotate(45deg);
+}
+
+
+
+.navigation-menu > li > a {
+    color: #fff;
+}
+
+
+@media (max-width: 600px){
+    .animation{
+        background-color: transparent;
+    }
+    .animation::before, .animation::after{
+        z-index: 1;
+        background-color: #000;
+    }
+    .navigation-list{
+        display: none;
+    }
+    .list-nav{
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        inset: 0 0 0 30%;
+        background-color: #fff;
+        padding: 30px 30px;
+        transition: 0.5s ease-in-out;
+        transform: translateX(0%);
+    }
+    .menu-nav > li > a{
+        color: #000;
+    }
+    .menu-nav{
+        display: grid;
+        padding: 60px 0px;
+        row-gap: 30px;
+    }
+}
+
+
+@media (min-width: 600px){
+    .hamburger{
+        display: none;
+    }
+    .navigation-list{
+        display: block;
+    }
+    .navigation-menu{
+        display: flex;
+        gap: 30px;
+    }
+}

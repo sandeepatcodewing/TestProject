@@ -86,8 +86,8 @@ img{
     padding: 16px 24px;
     border-radius: 10px;
     color: #fff;
-    display: flex;
-    justify-content: end;
+    display: inline-flex;
+    justify-content: start;
     align-items: center;
     gap: 16px;
     &:hover{
