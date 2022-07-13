@@ -839,30 +839,67 @@ button {
   font-size: 1.25rem;
   line-height: 32px;
   font-weight: 600;
-  color: var(--header-color); }
+  color: #fff; }
 
 .experts__card-text span {
   line-height: 28px;
-  font-weight: 200; }
+  font-weight: 200;
+  color: #fff; }
 
 @media (max-width: 767px) {
   .experts__cardslist {
     padding: 32px 0px 12px 0px;
-    grid-template-columns: repeat(1, 1fr); } }
+    grid-template-columns: repeat(1, 1fr); }
+  .experts__background-shape {
+    width: 150%;
+    height: 80%;
+    background: var(--primary-color);
+    position: absolute;
+    z-index: -1;
+    border-radius: 0 220px 220px 0px;
+    right: 0px;
+    bottom: -86px; } }
 
 @media (min-width: 768px) {
   .experts__cardslist {
     padding: 32px 0px 12px 0px;
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .experts__background-shape {
+    width: 150%;
+    height: 70%;
+    background: var(--primary-color);
+    position: absolute;
+    z-index: -1;
+    border-radius: 0 220px 220px 0px;
+    right: -50px;
+    bottom: -86px; } }
 
 @media (min-width: 992px) {
   .experts__cardslist {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .experts__background-shape {
+    width: 140%;
+    height: 70%;
+    background: var(--primary-color);
+    position: absolute;
+    z-index: -1;
+    border-radius: 0 220px 220px 0px;
+    right: 0px;
+    bottom: -86px; } }
 
 @media (min-width: 1200px) {
   .experts__cardslist {
     padding: 64px 0px 48px 0px;
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(4, 1fr); }
+  .experts__background-shape {
+    width: 150%;
+    height: 60%;
+    background: var(--primary-color);
+    position: absolute;
+    z-index: -1;
+    border-radius: 0 220px 220px 0px;
+    right: -160px;
+    bottom: -86px; } }
 
 .feedback__content {
   display: grid;

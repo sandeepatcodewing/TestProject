@@ -1,0 +1,8 @@
+    width: 150%;
+    height: 60%;
+    background: var(--primary-color);
+    position: absolute;
+    z-index: -1;
+    border-radius: 0 150px 150px 0px;
+    right: -161px;
+    bottom: -86px;
