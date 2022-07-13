@@ -1,14 +1,51 @@
-const navBar = document.querySelector(".show-navigation");
-const navToggle = document.querySelector(".mobile-nav-toggle");
+let visibility = false;
 
-navToggle.addEventListener('click',() => {
-    const visibility = navBar.getAttribute('data-visible');
-    if(visibility === "false"){
-        navBar.setAttribute('data-visible',true);
-        navToggle.setAttribute('aria-expanded', true)
+const menuBar = document.querySelector(".hamburger-menu");
+const navList = document.querySelector(".logo-nav__list");
+const navMenu = document.querySelector(".logo-nav__menu");
+const opacityType = document.querySelector("main")
+const rotatePoint = document.querySelector("#fa-solid");
+const rotateSubpoint = document.querySelector("#fa-sub-solid");
+const dropDown = document.querySelector(".logo-nav__drop--down");
+const subDrop = document.querySelector(".logo-nav__sub--menu");
+
+menuBar.addEventListener("click", () => {
+    visibility = !visibility;
+    if(visibility){
+        menuBar.classList.add("animate-menu");
+        navList.classList.add("list-nav")
+        navMenu.classList.add("menu-nav")
+        opacityType.classList.add("opacity-less");
     }
     else{
-        navBar.setAttribute('data-visible',false)
-        navToggle.setAttribute('aria-expanded', false)
+        menuBar.classList.remove("animate-menu");
+        navList.classList.remove("list-nav")
+        navMenu.classList.remove("menu-nav")
+        opacityType.classList.remove("opacity-less");
+    }
+});
+
+rotatePoint.addEventListener("click", () => {
+    visibility = !visibility;
+    if(visibility){
+        rotatePoint.classList.add("rotate-up")
+        dropDown.classList.add("show-drop-down");
+    }
+    else{
+        rotatePoint.classList.remove("rotate-up")
+        dropDown.classList.remove("show-drop-down");
+    }
+});
+
+
+rotateSubpoint.addEventListener("click", () => {
+    visibility = !visibility;
+    if(visibility){
+        rotateSubpoint.classList.add("sub-rotate-up")
+        subDrop.classList.add("show-sub-drop");
+    }
+    else{
+        rotateSubpoint.classList.remove("sub-rotate-up")
+        subDrop.classList.remove("show-sub-drop");
     }
 });

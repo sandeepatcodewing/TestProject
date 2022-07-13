@@ -60,26 +60,47 @@
       </section>
 
       <!-- logo + navbar section -->
-      <section class="logo-nav background-white">
+      <section class="logo-nav">
         <div class="container">
           <div class="logo-nav__section">
             <div class="logo-nav__logo">
               <a href="/"><img src="/assests/img/logo/logo.png" alt="Logo" /></a>
             </div>
-            <button class="mobile-nav-toggle" aria-controls="show-navigation" aria-expanded="false">
-              <span class="sr-only"></span>
-            </button>
-            <div class="logo-nav__navbar show-navigation" id="show-navigation" data-visible="false">
-              <nav>
-                <ul class="logo-nav__list">
-                  <li class="active"><a href="/index.html">Home</a></li>
-                  <li><a href="/about-us.html">About Us</a></li>
-                  <li><a href="/services.html">Services</a></li>
-                  <li><a href="/team.html">Team</a></li>
-                  <li><a href="/testimonal.html">Testimonal</a></li>
-                  <li><a href="/blog.html">Blog</a></li>
-                </ul>
-              </nav>
+            <div class="hamburger-menu"></div>
+            <nav class="logo-nav__list">
+              <ul class="logo-nav__menu">
+                <li class="active"><a href="/index.html">Home</a></li>
+                <li class="logo-nav__drop">
+                  <a href="/">
+                    About Us
+                    <span>
+                      <a href="#"><i id="fa-solid" class="fa-solid fa-chevron-down"></i></a>
+                    </span>
+                    <ul class="logo-nav__drop--down">
+                      <li class="logo-nav__sub">
+                        <a href="/">
+                          Our Team
+                          <span>
+                            <a href="#"><i id="fa-sub-solid" class="fa-solid fa-chevron-down"></i></a>
+                          </span>
+                        </a>
+                        <ul class="logo-nav__sub--menu">
+                          <li><a href="/">Front End</a></li>
+                          <li><a href="/">Backend</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Our Developer</a>
+                      </li>
+                      <li><a href="#">Our HR</a></li>
+                    </ul>
+                  </a>
+                </li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/team.html">Team</a></li>
+                <li><a href="/testimonal.html">Testimonal</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+              </ul>
               <div class="logo-nav__button">
                 <a href="/contact.html">
                   <p class="btn-primary">
@@ -129,7 +150,7 @@
                   </span>
                 </div>
               </div>
-            </div>
+            </nav>
           </div>
         </div>
       </section>

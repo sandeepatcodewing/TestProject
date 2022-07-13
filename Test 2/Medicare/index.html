@@ -12,7 +12,7 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header>
+    <header class="header">
       <!-- top header section -->
       <section class="header-top">
         <div class="container">
@@ -61,35 +61,47 @@
       </section>
 
       <!-- logo + navbar section -->
-      <section class="logo-nav background-white">
+      <section class="logo-nav">
         <div class="container">
           <div class="logo-nav__section">
             <div class="logo-nav__logo">
               <a href="/"><img src="/assests/img/logo/logo.png" alt="Logo" /></a>
             </div>
-            <button class="mobile-nav-toggle" aria-controls="show-navigation" aria-expanded="false">
-              <span class="sr-only"></span>
-            </button>
-            <div class="logo-nav__navbar show-navigation" id="show-navigation" data-visible="false">
-              <nav>
-                <ul class="logo-nav__list">
-                  <li class="active"><a href="/index.html">Home</a></li>
-                  <li class="logo-nav__drop-down">
-                    <a href="/">About Us</a>
-                    <a class="logo-nav__drop-down--click" href="#">
-                      <span class="logo-nav__arrow-down"><i class="fa-solid fa-chevron-down"></i></span>
-                    </a>
-                    <ul class="logo-nav__drop-down--menu">
-                      <li><a href="#">About Team</a></li>
-                      <li><a href="#">About Doctors</a></li>
+            <div class="hamburger-menu"></div>
+            <nav class="logo-nav__list">
+              <ul class="logo-nav__menu">
+                <li class="active"><a href="/index.html">Home</a></li>
+                <li class="logo-nav__drop">
+                  <a href="/">
+                    About Us
+                    <span>
+                      <a href="#"><i id="fa-solid" class="fa-solid fa-chevron-down"></i></a>
+                    </span>
+                    <ul class="logo-nav__drop--down">
+                      <li class="logo-nav__sub">
+                        <a href="/">
+                          Our Team
+                          <span>
+                            <a href="#"><i id="fa-sub-solid" class="fa-solid fa-chevron-down"></i></a>
+                          </span>
+                        </a>
+                        <ul class="logo-nav__sub--menu">
+                          <li><a href="/">Front End</a></li>
+                          <li><a href="/">Backend</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Our Developer</a>
+                      </li>
+                      <li><a href="#">Our HR</a></li>
                     </ul>
-                  </li>
-                  <li><a href="/services.html">Services</a></li>
-                  <li><a href="/team.html">Team</a></li>
-                  <li><a href="/testimonal.html">Testimonal</a></li>
-                  <li><a href="/blog.html">Blog</a></li>
-                </ul>
-              </nav>
+                  </a>
+                </li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/team.html">Team</a></li>
+                <li><a href="/testimonal.html">Testimonal</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+              </ul>
               <div class="logo-nav__button">
                 <a href="/contact.html">
                   <p class="btn-primary">
@@ -139,16 +151,16 @@
                   </span>
                 </div>
               </div>
-            </div>
+            </nav>
           </div>
         </div>
       </section>
     </header>
 
     <!-- BODY -->
-    <main>
+    <main class="main">
       <!-- banner -->
-      <section class="banner background-white">
+      <section class="banner">
         <div class="container">
           <div class="banner__content">
             <div class="banner__text">
@@ -175,7 +187,7 @@
         </div>
       </section>
       <!-- features -->
-      <section class="features background-white">
+      <section class="features">
         <div class="container">
           <div class="features__content shadow-right">
             <div class="features__emergency">
@@ -259,7 +271,7 @@
       </section>
 
       <!-- services -->
-      <section class="services breathing-space background-white">
+      <section class="services breathing-space">
         <div class="container">
           <div class="services__content text-center">
             <div class="services__texts">
@@ -415,7 +427,7 @@
       </section>
 
       <!-- appointment -->
-      <section class="appointment breathing-space background-white">
+      <section class="appointment breathing-space">
         <div class="container">
           <div class="appointment__content">
             <div class="appointment__texts">
@@ -497,7 +509,7 @@
       </section>
 
       <!-- experts -->
-      <section class="experts breathing-space background-white">
+      <section class="experts breathing-space">
         <div class="container">
           <div class="experts__content text-center">
             <div class="experts__texts">
@@ -557,7 +569,7 @@
       </section>
 
       <!-- feedback -->
-      <section class="feedback breathing-space background-white">
+      <section class="feedback breathing-space">
         <div class="container">
           <div class="feedback__content">
             <div class="feedback__image">
@@ -653,7 +665,7 @@
       </section>
 
       <!-- assist -->
-      <section class="assist background-white breathing-space">
+      <section class="assist breathing-space">
         <div class="container">
           <div class="assist__content">
             <div class="assist__corner">

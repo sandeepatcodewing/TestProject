@@ -88,6 +88,7 @@ h2{
     }
     .navigation-list{
         display: none;
+        transition: 0.5s ease-in-out;
     }
     .list-nav{
         display: block;
@@ -97,8 +98,11 @@ h2{
         inset: 0 0 0 30%;
         background-color: #fff;
         padding: 30px 30px;
-        transition: 0.5s ease-in-out;
         transform: translateX(0%);
+        opacity: 1;
+    }
+    .opacity-less{
+        opacity: 0.5;
     }
     .menu-nav > li > a{
         color: #000;
