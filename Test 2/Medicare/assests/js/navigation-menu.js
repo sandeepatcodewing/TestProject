@@ -4,6 +4,7 @@ const menuBar = document.querySelector(".hamburger-menu");
 const navList = document.querySelector(".logo-nav__list");
 const navMenu = document.querySelector(".logo-nav__menu");
 const opacityType = document.querySelector("main")
+const opacityType2 = document.querySelector("footer")
 const rotatePoint = document.querySelector("#fa-solid");
 const rotateSubpoint = document.querySelector("#fa-sub-solid");
 const dropDown = document.querySelector(".logo-nav__drop--down");
@@ -16,12 +17,14 @@ menuBar.addEventListener("click", () => {
         navList.classList.add("list-nav")
         navMenu.classList.add("menu-nav")
         opacityType.classList.add("opacity-less");
+        opacityType2.classList.add("opacity-less");
     }
     else{
         menuBar.classList.remove("animate-menu");
         navList.classList.remove("list-nav")
         navMenu.classList.remove("menu-nav")
         opacityType.classList.remove("opacity-less");
+        opacityType2.classList.remove("opacity-less");
     }
 });
 

@@ -15,7 +15,6 @@ body{
     font-size: 1rem;
     font-family: 'Inter', sans-serif;
     line-height: 24px;
-    background: var(--background-section-color);
 }
 
 h1,h2{
@@ -67,6 +66,10 @@ img{
     }
 }
 
+.remove-padding{
+    padding: 0px 0px 0px 0px;
+}
+
 .fa-circle-check{
     color: #0EB654;
 }
@@ -78,8 +81,8 @@ img{
     color: var(--paragraph-color);
 }
 
-.background-white{
-    background-color: #fff;
+.background-green{
+    background-color: var(--background-section-color);
 }
 
 %button-primary{
@@ -176,7 +179,13 @@ img{
     }
 }
 
+.border-top{
+    border-top: 1px solid rgba(103, 106, 138, 0.15);
+}
 
+.border-bottom{
+    border-bottom: 1px solid rgba(103, 106, 138, 0.15);
+}
 
 .opacity-less:not(header){
     display: block;
@@ -186,7 +195,6 @@ img{
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.5);
     opacity: 0.2;
 }
 
