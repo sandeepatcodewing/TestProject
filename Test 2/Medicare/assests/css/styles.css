@@ -233,7 +233,6 @@ button {
     margin: auto 0;
     border-radius: 15px;
     z-index: 1000;
-    transition: 0.2s ease-in-out;
     cursor: pointer; }
     .logo-nav .hamburger-menu::before, .logo-nav .hamburger-menu::after {
       content: '';
