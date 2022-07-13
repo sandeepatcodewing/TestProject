@@ -233,7 +233,8 @@ button {
     margin: auto 0;
     border-radius: 15px;
     z-index: 1000;
-    transition: 0.2s ease-in-out; }
+    transition: 0.2s ease-in-out;
+    cursor: pointer; }
     .logo-nav .hamburger-menu::before, .logo-nav .hamburger-menu::after {
       content: '';
       width: 40px;
@@ -248,7 +249,8 @@ button {
       transform: translateY(12px); }
   .logo-nav .animate-menu {
     position: relative;
-    background-color: transparent; }
+    background-color: transparent;
+    cursor: pointer; }
   .logo-nav .animate-menu::before {
     transform: rotate(-45deg); }
   .logo-nav .animate-menu::after {
