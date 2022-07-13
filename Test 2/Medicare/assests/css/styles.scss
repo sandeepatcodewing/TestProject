@@ -781,12 +781,15 @@
             display: grid;
         }
     }
-    input, select, textarea{
+    input , select, textarea{
         max-width: 100%;
-        padding: 14px 5px;
+        padding: 14px 15px;
         border-radius: 10px;
         color: rgba(5, 32, 61, 0.28);
         border: 1px solid rgba(5, 32, 61, 0.1);
+        &::placeholder{
+            color: rgba(5, 32, 61, 0.28);
+        }
     }
     label{
         font-size: 1.125rem;
